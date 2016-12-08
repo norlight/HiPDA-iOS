@@ -13,3 +13,19 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #endif /* HP_Prefix_pch */
+
+
+
+//全局导入
+#import <BlocksKit/BlocksKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
+//A better version of NSLog
+#define NSLog(format, ...) do {                                             \
+fprintf(stderr, "<%s : Line %d> %s\n",                                      \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
