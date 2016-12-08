@@ -10,7 +10,6 @@
 		664056C01DF952C1002FC462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056BF1DF952C1002FC462 /* main.m */; };
 		664056C31DF952C1002FC462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056C21DF952C1002FC462 /* AppDelegate.m */; };
 		664056C61DF952C1002FC462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056C51DF952C1002FC462 /* ViewController.m */; };
-		664056C91DF952C1002FC462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664056C71DF952C1002FC462 /* Main.storyboard */; };
 		664056CB1DF952C1002FC462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664056CA1DF952C1002FC462 /* Assets.xcassets */; };
 		664056CE1DF952C1002FC462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664056CC1DF952C1002FC462 /* LaunchScreen.storyboard */; };
 		664056D91DF952C1002FC462 /* HiPDATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056D81DF952C1002FC462 /* HiPDATests.m */; };
@@ -41,7 +40,6 @@
 		664056C21DF952C1002FC462 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		664056C41DF952C1002FC462 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		664056C51DF952C1002FC462 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		664056C81DF952C1002FC462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		664056CA1DF952C1002FC462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664056CD1DF952C1002FC462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664056CF1DF952C1002FC462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +49,7 @@
 		664056DF1DF952C1002FC462 /* HiPDAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiPDAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664056E31DF952C1002FC462 /* HiPDAUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiPDAUITests.m; sourceTree = "<group>"; };
 		664056E51DF952C1002FC462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		664056F11DF955A4002FC462 /* HP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HP-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +102,7 @@
 			children = (
 				664056C11DF952C1002FC462 /* AppDelegate.h */,
 				664056C21DF952C1002FC462 /* AppDelegate.m */,
-				664056C41DF952C1002FC462 /* ViewController.h */,
-				664056C51DF952C1002FC462 /* ViewController.m */,
-				664056C71DF952C1002FC462 /* Main.storyboard */,
 				664056CA1DF952C1002FC462 /* Assets.xcassets */,
-				664056CC1DF952C1002FC462 /* LaunchScreen.storyboard */,
-				664056CF1DF952C1002FC462 /* Info.plist */,
 				664056BE1DF952C1002FC462 /* Supporting Files */,
 			);
 			path = HiPDA;
@@ -117,7 +111,12 @@
 		664056BE1DF952C1002FC462 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				664056C41DF952C1002FC462 /* ViewController.h */,
+				664056C51DF952C1002FC462 /* ViewController.m */,
+				664056CC1DF952C1002FC462 /* LaunchScreen.storyboard */,
+				664056CF1DF952C1002FC462 /* Info.plist */,
 				664056BF1DF952C1002FC462 /* main.m */,
+				664056F11DF955A4002FC462 /* HP-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +201,7 @@
 		664056B31DF952C1002FC462 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XEJ;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = norlight;
 				TargetAttributes = {
@@ -248,7 +248,6 @@
 			files = (
 				664056CE1DF952C1002FC462 /* LaunchScreen.storyboard in Resources */,
 				664056CB1DF952C1002FC462 /* Assets.xcassets in Resources */,
-				664056C91DF952C1002FC462 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +310,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		664056C71DF952C1002FC462 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				664056C81DF952C1002FC462 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		664056CC1DF952C1002FC462 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,6 +348,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HiPDA/HP-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -367,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,13 +393,15 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HiPDA/HP-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,6 +496,7 @@
 				664056EA1DF952C1002FC462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664056EB1DF952C1002FC462 /* Build configuration list for PBXNativeTarget "HiPDATests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +505,7 @@
 				664056ED1DF952C1002FC462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664056EE1DF952C1002FC462 /* Build configuration list for PBXNativeTarget "HiPDAUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +514,7 @@
 				664056F01DF952C1002FC462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

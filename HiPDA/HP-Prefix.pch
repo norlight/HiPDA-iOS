@@ -1,0 +1,15 @@
+//
+//  HP-Prefix.pch
+//  HiPDA
+//
+//  Created by Blink on 16/12/8.
+//  Copyright © 2016年 norlight. All rights reserved.
+//
+
+#ifndef HP_Prefix_pch
+#define HP_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* HP_Prefix_pch */
