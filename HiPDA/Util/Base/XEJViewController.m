@@ -11,6 +11,24 @@
 @implementation XEJViewController
 
 #pragma mark - Life Cycle
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    XEJViewController *vc = [super allocWithZone:zone];
+    
+    @weakify(vc);
+    [[vc rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id x) {
+        @strongify(vc);
+        [vc setupViews];
+
+        //[vc bindViewModel];
+    }];
+    
+    [[vc rac_signalForSelector:@selector(viewWillAppear:)] subscribeNext:^(id x) {
+        [vc setupNavigation];
+    }];
+    
+    return vc;
+}
 - (instancetype)initWithViewModel:(id<XEJViewModelProtocol>)viewModel
 {
     self = [super init];
@@ -21,30 +39,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    [self setupViews];
-    [self layoutViews];
-    [self bindViewModel];
-    
-    [self fetchNewData];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self setupNavigation];
-}
 
 
-#pragma mark
+
+
+
+#pragma mark - Setup
 - (void)setupViews {};
-- (void)layoutViews {};
-- (void)bindViewModel {};
+//- (void)bindViewModel {};
 - (void)setupNavigation {};
-- (void)fetchNewData {};
 @end

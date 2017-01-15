@@ -7,17 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XEJViewModelProtocol.h"
+#import "XEJViewProtocol.h"
 
-@protocol XEJViewControllerProtocol <NSObject>
+@protocol XEJViewControllerProtocol <XEJViewProtocol>
 
 @optional
-- (instancetype)initWithViewModel:(id<XEJViewModelProtocol>)viewModel;
-
-- (void)setupViews;
-- (void)layoutViews;
-- (void)bindViewModel;
+//vc的viewmodel更多是用来初始化v，暂时去除绑定
+//- (void)bindViewModel;
 - (void)setupNavigation;
-- (void)fetchNewData;
 
 @end

@@ -16,7 +16,6 @@
 - (instancetype)initWithViewModel:(id<XEJViewModelProtocol>)viewModel;
 
 - (void)setupViews;
-- (void)layoutViews;
-- (void)bindViewModel;
+- (void)bindViewModel:(id<XEJViewModelProtocol>)viewModel;
 
 @end

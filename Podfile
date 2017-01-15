@@ -6,8 +6,11 @@ target 'HiPDA' do
   # use_frameworks!
 
   # Pods for HiPDA
+  pod 'Masonry', '1.0.2'
   pod 'BlocksKit', '2.2.5'
   pod 'ReactiveCocoa', '2.5'
+  pod 'AFNetworking', '3.1.0'
+  pod 'UITableView+FDTemplateLayoutCell', '1.5.beta'
   
   
   

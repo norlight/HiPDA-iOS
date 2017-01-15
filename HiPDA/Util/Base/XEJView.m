@@ -10,30 +10,27 @@
 
 @implementation XEJView
 
-- (instancetype)initPrivate
+- (instancetype)init
+{
+    return [self initWithViewModel:nil];
+}
+
+- (instancetype)initWithViewModel:(id<XEJViewModelProtocol>)viewModel
 {
     self = [super init];
     if (self) {
-        [self setupViews];
-        [self layoutViews];
-        [self bindViewModel];
+        if ([self respondsToSelector:@selector(setupViews)]) {
+            [self setupViews];
+        }
+        
+        if (viewModel && [self respondsToSelector:@selector(bindViewModel:)]) {
+            [self bindViewModel:viewModel];
+        }
     }
     
     return self;
 }
 
-- (instancetype)init
-{
-    return [self initPrivate];
-}
 
-- (instancetype)initWithViewModel:(id<XEJViewModelProtocol>)viewModel
-{
-    return [self initPrivate];
-}
-
-- (void)setupViews {};
-- (void)layoutViews {};
-- (void)bindViewModel {};
 
 @end
