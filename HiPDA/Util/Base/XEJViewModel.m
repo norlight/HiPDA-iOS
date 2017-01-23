@@ -24,4 +24,17 @@
 {
     //各种共有的初始化放这里
 }
+
+- (NSString *)controllerName
+{
+    NSString *viewModelName = NSStringFromClass([self class]);
+    return [viewModelName stringByReplacingOccurrencesOfString:@"Model" withString:@"Controller"];
+}
+
+
+
+
+
+
+
 @end

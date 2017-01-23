@@ -14,6 +14,7 @@
 @optional
 
 - (instancetype)initWithModel:(id<XEJModelProtocol>)model;
-- (void)xej_initialize;  
+- (void)xej_initialize;
+- (NSString *)controllerName;  //对应Controller，用于vm route vm
 
 @end

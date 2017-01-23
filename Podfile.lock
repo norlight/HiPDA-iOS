@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AspectsV1.4.2 (1.4.2)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -29,6 +30,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - Kiwi (2.4.0)
   - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -37,22 +39,35 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - ReactiveViewModel (0.3):
+    - ReactiveCocoa (~> 2.4)
   - UITableView+FDTemplateLayoutCell (1.5.beta)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
+  - AspectsV1.4.2 (= 1.4.2)
   - BlocksKit (= 2.2.5)
+  - Kiwi (= 2.4.0)
   - Masonry (= 1.0.2)
   - ReactiveCocoa (= 2.5)
+  - ReactiveViewModel (= 0.3)
   - UITableView+FDTemplateLayoutCell (= 1.5.beta)
+  - YYKit (= 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AspectsV1.4.2: a8b168606776215f5ba4790b95ff315df336aca9
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: c9889b7af2058681bde6713c642bcd366a66cfae
+PODFILE CHECKSUM: e97a354cb04b21fa0b69b78de593f553043d4279
 
 COCOAPODS: 1.1.1

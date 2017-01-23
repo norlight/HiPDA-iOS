@@ -1,27 +1,30 @@
 //
-//  XEJThreadListCell.m
+//  XEJThreadCell.m
 //  HiPDA
 //
-//  Created by Blink on 17/1/15.
+//  Created by Blink on 17/1/22.
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJThreadListCell.h"
+#import "XEJThreadCell.h"
 #import "XEJAvatarView.h"
+#import "XEJQuoteView.h"
 #import <Masonry/Masonry.h>
 
-@interface XEJThreadListCell ()
+
+@interface XEJThreadCell ()
 
 @property (nonatomic, strong) XEJAvatarView *avatarView;
-@property (nonatomic, strong) UIImageView *attachmentImageView;
+@property (nonatomic, strong) XEJQuoteView *quoteView;
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UILabel *createdAtLabel;
-@property (nonatomic, strong) UILabel *numberLabel;
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *updatedAtLabel;
+@property (nonatomic, strong) UILabel *floorLabel;
+@property (nonatomic, strong) UILabel *contentLabel;
 
 @end
 
-@implementation XEJThreadListCell
+@implementation XEJThreadCell
 
 - (void)setupViews
 {
@@ -32,12 +35,11 @@
         view;
     });
     
-    self.attachmentImageView = ({
-        UIImageView *imageView = [UIImageView new];
-        imageView.image = [UIImage imageNamed:@"icon_document_image"];
+    self.quoteView = ({
+        XEJQuoteView *view = [XEJQuoteView new];
         
-        [self.contentView addSubview:imageView];
-        imageView;
+        [self.contentView addSubview:view];
+        view;
     });
     
     self.usernameLabel = ({
@@ -60,28 +62,34 @@
         label;
     });
     
-    self.numberLabel = ({
-        
+    self.updatedAtLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"1/199";
-        label.font = [UIFont systemFontOfSize:12.0f];
-        label.textColor = [UIColor grayColor];
+        label.text = @"本帖最后由 username 于今天 00:00 编辑";
+        label.font = [UIFont systemFontOfSize:14.0f];
+        label.textColor = [UIColor lightGrayColor];
         
         [self.contentView addSubview:label];
         label;
     });
     
-    self.titleLabel = ({
+    self.floorLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"标题title";
-        label.numberOfLines = 2;
+        label.text = @"20";
+        label.font = [UIFont systemFontOfSize:14.0f];
+        label.textColor = [UIColor lightGrayColor];
+        [self.contentView addSubview:label];
+        label;
+    });
+    
+    self.contentLabel = ({
+        UILabel *label = [UILabel new];
+        label.text = @"内容内容内容";
         label.font = [UIFont systemFontOfSize:18.0f];
         label.textColor = [UIColor blackColor];
         
         [self.contentView addSubview:label];
         label;
     });
-    
 }
 
 - (void)updateConstraints
@@ -102,29 +110,37 @@
         make.bottom.equalTo(self.avatarView.mas_bottom).offset(-3);
     }];
     
-    [self.numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.floorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.avatarView);
         make.right.offset(-10);
     }];
     
-    [self.attachmentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(16, 16));
-        make.centerY.equalTo(self.numberLabel);
-        make.right.equalTo(self.numberLabel.mas_left).offset(-2);
+    [self.updatedAtLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        (void)make.centerX;
+        make.top.equalTo(self.avatarView.mas_bottom).offset(20);
     }];
     
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.avatarView.mas_bottom).offset(10).priorityMedium();
-        make.left.equalTo(self.avatarView);
+    
+    [self.quoteView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.updatedAtLabel.mas_bottom).offset(20);
+        make.left.offset(8);
+        make.right.offset(-8);
+    }];
+    
+    
+    [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.top.equalTo(self.updatedAtLabel.mas_bottom);
+        make.top.equalTo(self.quoteView.mas_bottom);
+        make.left.equalTo(self.quoteView);
         make.bottom.offset(-5);
     }];
     
     [super updateConstraints];
 }
 
-- (void)bindViewModel:(XEJThreadListCellViewModel *)viewModel
+- (void)bindViewModel:(XEJXEJThreadCellViewModel *)viewModel
 {
-    self.titleLabel.text = @"标题titletitle";
+
 }
 
 @end

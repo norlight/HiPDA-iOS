@@ -14,7 +14,11 @@
 {
     self = [super initWithFrame:frame style:style];
     if (self) {
-        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        //去除分割线
+        //self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+        //空白footer，隐藏多余分割线
+        self.tableFooterView = [UIView new];
         
         if ([self respondsToSelector:@selector(setSeparatorInset:)]) {
             self.separatorInset = UIEdgeInsetsZero;

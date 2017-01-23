@@ -6,10 +6,13 @@ target 'HiPDA' do
   # use_frameworks!
 
   # Pods for HiPDA
+  pod 'YYKit', '1.0.9'
   pod 'Masonry', '1.0.2'
   pod 'BlocksKit', '2.2.5'
   pod 'ReactiveCocoa', '2.5'
   pod 'AFNetworking', '3.1.0'
+  pod 'AspectsV1.4.2', '1.4.2'
+  pod 'ReactiveViewModel', '0.3'
   pod 'UITableView+FDTemplateLayoutCell', '1.5.beta'
   
   
@@ -18,6 +21,7 @@ target 'HiPDA' do
   target 'HiPDATests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Kiwi', '2.4.0'
   end
 
   target 'HiPDAUITests' do

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "XEJThreadListViewController.h"
+#import "XEJThreadViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [UIViewController new];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
     
     
     

@@ -1,38 +1,32 @@
 //
-//  XEJThreadListView.m
+//  XEJThreadView.m
 //  HiPDA
 //
-//  Created by Blink on 17/1/15.
+//  Created by Blink on 17/1/22.
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJThreadListView.h"
-#import "XEJThreadListViewModel.h"
-#import "XEJThreadListCell.h"
+#import "XEJThreadView.h"
+#import "XEJThreadViewModel.h"
 #import "XEJTableView.h"
+#import "XEJThreadCell.h"
 #import <Masonry/Masonry.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
-@interface XEJThreadListView () <UITableViewDataSource, UITableViewDelegate>
+@interface XEJThreadView () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) XEJThreadListViewModel *viewModel;
+@property (nonatomic, strong) XEJThreadViewModel *viewModel;
 @property (nonatomic, strong) XEJTableView *mainTableView;
 
 @end
 
-@implementation XEJThreadListView
-
-- (instancetype)initWithViewModel:(XEJThreadListViewModel *)viewModel
-{
-    self.viewModel = viewModel;
-    return [super initWithViewModel:viewModel];
-}
+@implementation XEJThreadView
 
 - (void)setupViews
 {
     self.mainTableView = ({
         XEJTableView *tableView = [[XEJTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        [tableView registerClass:[XEJThreadListCell class] forCellReuseIdentifier:NSStringFromClass([XEJThreadListCell class])];
+        [tableView registerClass:[XEJThreadCell class] forCellReuseIdentifier:NSStringFromClass([XEJThreadCell class])];
         tableView.dataSource = self;
         tableView.delegate = self;
         
@@ -71,16 +65,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:NSStringFromClass([XEJThreadListCell class])
-                                       configuration:^(XEJThreadListCell *cell) {
+    return [tableView fd_heightForCellWithIdentifier:NSStringFromClass([XEJThreadCell class])
+                                       configuration:^(XEJThreadCell *cell) {
                                            [cell bindViewModel:self.viewModel.dataArray[indexPath.row]];
-    }];
+                                       }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XEJThreadListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([XEJThreadListCell class])
-                                                             forIndexPath:indexPath];
+    XEJThreadCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([XEJThreadCell class])
+                                                              forIndexPath:indexPath];
     [cell bindViewModel:self.viewModel.dataArray[indexPath.row]];
     return cell;
 }
