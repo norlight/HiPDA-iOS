@@ -38,8 +38,10 @@
     [self updateConstraintsIfNeeded];
 }
 
-- (void)bindViewModel
+- (void)bindViewModel:(XEJThreadViewModel *)viewModel
 {
+    self.viewModel = viewModel;
+    
     [self.viewModel.updateUI subscribeNext:^(id x) {
         [self.mainTableView reloadData];
     }];

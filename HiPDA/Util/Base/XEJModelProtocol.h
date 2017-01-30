@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Ono/Ono.h>
 
 @protocol XEJModelProtocol <NSObject>
+
+@optional
+- (instancetype)initWithElement:(ONOXMLElement *)element;
++ (instancetype)modelWithElement:(ONOXMLElement *)element;
+
+- (void)xej_initialize;
 
 @end

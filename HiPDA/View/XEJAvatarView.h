@@ -13,4 +13,5 @@
 
 @property (nonatomic, strong) XEJAvatarViewModel *viewModel;
 
+
 @end

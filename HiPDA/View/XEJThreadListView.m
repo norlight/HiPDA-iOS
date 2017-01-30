@@ -22,11 +22,13 @@
 
 @implementation XEJThreadListView
 
+/*
 - (instancetype)initWithViewModel:(XEJThreadListViewModel *)viewModel
 {
     self.viewModel = viewModel;
     return [super initWithViewModel:viewModel];
 }
+ */
 
 - (void)setupViews
 {
@@ -44,8 +46,9 @@
     [self updateConstraintsIfNeeded];
 }
 
-- (void)bindViewModel
+- (void)bindViewModel:(XEJThreadListViewModel *)viewModel
 {
+    self.viewModel = viewModel;
     [self.viewModel.updateUI subscribeNext:^(id x) {
         [self.mainTableView reloadData];
     }];
@@ -65,7 +68,7 @@
 #pragma mark - UITableViewDataSouuce、Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    //return 3;
     return self.viewModel.dataArray.count;
 }
 

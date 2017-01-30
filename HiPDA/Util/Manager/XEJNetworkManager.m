@@ -9,7 +9,7 @@
 #import "XEJNetworkManager.h"
 #import <AFNetworking/AFNetworking.h>
 
-static NSString *const kBaseURLString = @"https://www.hi-pda.com";
+//static NSString *const kBaseURLString = @"https://www.hi-pda.com";
 
 @interface XEJNetworkManager ()
 
@@ -40,7 +40,7 @@ static NSString *const kBaseURLString = @"https://www.hi-pda.com";
     
     if (self) {
         //占楼
-        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[[NSURL alloc] initWithString:kBaseURLString]];
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[[NSURL alloc] initWithString:XEJBaseUrl]];
         _manager = manager;
         
         //用户代理伪装

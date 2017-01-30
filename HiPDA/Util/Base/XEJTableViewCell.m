@@ -25,6 +25,11 @@
             self.layoutMargins = UIEdgeInsetsZero;
         }
         
+        
+        if ([self respondsToSelector:@selector(xej_initialize)]) {
+            [self xej_initialize];
+        }
+        
         if ([self respondsToSelector:@selector(setupViews)]) {
             [self setupViews];
         }

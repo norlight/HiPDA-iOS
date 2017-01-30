@@ -29,3 +29,41 @@ __LINE__, __func__);                                                        \
 (NSLog)((format), ##__VA_ARGS__);                                           \
 fprintf(stderr, "-------\n");                                               \
 } while (0)
+
+
+
+
+#pragma mark - BaseUrls
+#define XEJForumHost @"https://www.hi-pda.com"
+#define XEJImageHost @"https://img02.hi-pda.com"
+#define XEJBasePath @"/forum/"
+
+#define XEJBaseUrl [NSString stringWithFormat:@"%@%@", XEJForumHost, XEJBasePath]
+#define XEJImageBaseUrl [NSString stringWithFormat:@"%@%@", XEJImageHost, XEJBasePath]
+
+//头像
+#define XEJAvatarPath @"uc_server/data/avatar/"
+#define XEJAvatarBaseUrl [NSString stringWithFormat:@"%@%@", XEJImageBaseUrl, XEJAvatarPath]
+
+//版块
+#define XEJForumPath @"forumdisplay.php?fid=%@&page=%@"
+
+//帖子
+#define XEJThreadPath @"viewthread.php?tid=%@&extra=page=%@"
+
+
+
+
+
+#pragma mark - Colors
+#define XEJMainColor [UIColor colorWithRed:0.0f green:0.5f blue:0.9f alpha:1.0f]
+
+
+
+
+
+
+
+
+
+

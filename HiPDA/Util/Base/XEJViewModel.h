@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XEJViewModelProtocol.h"
+#import <ReactiveViewModel/ReactiveViewModel.h>
 
 @interface XEJViewModel : NSObject <XEJViewModelProtocol>
 

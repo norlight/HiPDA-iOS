@@ -9,11 +9,15 @@
 #import "XEJThreadListCell.h"
 #import "XEJAvatarView.h"
 #import <Masonry/Masonry.h>
+#import <YYKit/UIImage+YYAdd.h>
 
 @interface XEJThreadListCell ()
 
+@property (nonatomic, strong) UIImage *commonAttach;
+@property (nonatomic, strong) UIImage *imageAttach;
+
 @property (nonatomic, strong) XEJAvatarView *avatarView;
-@property (nonatomic, strong) UIImageView *attachmentImageView;
+@property (nonatomic, strong) UIImageView *attachImageView;
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UILabel *createdAtLabel;
 @property (nonatomic, strong) UILabel *numberLabel;
@@ -22,6 +26,12 @@
 @end
 
 @implementation XEJThreadListCell
+
+- (void)xej_initialize
+{
+    self.commonAttach = [[UIImage imageNamed:@"icon_attach_common"] imageByTintColor:XEJMainColor];
+    self.imageAttach = [[UIImage imageNamed:@"icon_attach_image_day"] imageByTintColor:XEJMainColor];
+}
 
 - (void)setupViews
 {
@@ -32,9 +42,9 @@
         view;
     });
     
-    self.attachmentImageView = ({
+    self.attachImageView = ({
         UIImageView *imageView = [UIImageView new];
-        imageView.image = [UIImage imageNamed:@"icon_document_image"];
+        imageView.image = self.imageAttach;
         
         [self.contentView addSubview:imageView];
         imageView;
@@ -42,9 +52,10 @@
     
     self.usernameLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"用户名username";
+        label.text = @"username";
         label.font = [UIFont systemFontOfSize:14.0f];
-        label.textColor = [UIColor colorWithRed:0.25f green:0.70f blue:0.90f alpha:1.00f];
+        //label.textColor = [UIColor colorWithRed:0.25f green:0.70f blue:0.90f alpha:1.00f];
+        label.textColor = XEJMainColor;
         
         [self.contentView addSubview:label];
         label;
@@ -52,7 +63,7 @@
     
     self.createdAtLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"今天date";
+        label.text = @"date";
         label.font = [UIFont systemFontOfSize:12.0f];
         label.textColor = [UIColor grayColor];
         
@@ -63,7 +74,7 @@
     self.numberLabel = ({
         
         UILabel *label = [UILabel new];
-        label.text = @"1/199";
+        label.text = @"1/99";
         label.font = [UIFont systemFontOfSize:12.0f];
         label.textColor = [UIColor grayColor];
         
@@ -73,7 +84,7 @@
     
     self.titleLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"标题title";
+        label.text = @"title";
         label.numberOfLines = 2;
         label.font = [UIFont systemFontOfSize:18.0f];
         label.textColor = [UIColor blackColor];
@@ -107,7 +118,7 @@
         make.right.offset(-10);
     }];
     
-    [self.attachmentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.attachImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(16, 16));
         make.centerY.equalTo(self.numberLabel);
         make.right.equalTo(self.numberLabel.mas_left).offset(-2);
@@ -115,7 +126,8 @@
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.avatarView.mas_bottom).offset(10).priorityMedium();
-        make.left.equalTo(self.avatarView);
+        make.left.offset(10);
+        make.right.offset(-10);
         make.bottom.offset(-5);
     }];
     
@@ -124,7 +136,32 @@
 
 - (void)bindViewModel:(XEJThreadListCellViewModel *)viewModel
 {
-    self.titleLabel.text = @"标题titletitle";
+    self.viewModel = viewModel;
+    
+    [self.avatarView bindViewModel:viewModel.avatarViewModel];
+    
+    self.usernameLabel.text = viewModel.username;
+    self.createdAtLabel.text = viewModel.createdAtString;
+    self.numberLabel.text = [NSString stringWithFormat:@"%@/%@", viewModel.replyCountString, viewModel.viewCountString];
+    self.titleLabel.text = viewModel.title;
+    self.titleLabel.textColor = viewModel.titleColor;
+    //self.attachmentImageView.hidden = !viewModel.hasImageAttach;
+    if (viewModel.hasCommonAttach) {
+        self.attachImageView.image = self.commonAttach;
+        self.attachImageView.hidden = NO;
+    } else if (viewModel.hasImageAttach) {
+        self.attachImageView.image = self.imageAttach;
+        self.attachImageView.hidden = NO;
+    } else {
+        self.attachImageView.hidden = YES;
+    }
 }
+
+
+
+
+
+
+
 
 @end

@@ -6,10 +6,10 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJQuoteView.h"
+#import "XEJThreadContentQuoteView.h"
 #import <Masonry/Masonry.h>
 
-@interface XEJQuoteView ()
+@interface XEJThreadContentQuoteView ()
 
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UILabel *floorLabel;
@@ -18,12 +18,12 @@
 
 @end
 
-@implementation XEJQuoteView
+@implementation XEJThreadContentQuoteView
 
 - (void)setupViews
 {
     self.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
-    self.layer.cornerRadius = 3.0f;
+    //self.layer.cornerRadius = 3.0f;
     self.layer.borderWidth = 0.8f;
     self.layer.borderColor = [UIColor colorWithWhite:0.92f alpha:1.0f].CGColor;
     
@@ -57,7 +57,7 @@
     
     self.contentLabel = ({
         UILabel *label = [UILabel new];
-        label.text = @"Content内容Content内容Content内容Content内容Content内容Content内容Content内容Content内容Content内容Content内容Content";
+        label.text = @"Content内容";
         label.numberOfLines = 5;
         label.font = [UIFont systemFontOfSize:16.0f];
         label.textColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
@@ -65,6 +65,9 @@
         [self addSubview:label];
         label;
     });
+    
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
 }
 
 
@@ -88,9 +91,8 @@
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.line.mas_bottom).offset(8);
-        //(void)make.left.right.equalTo(self.line);
         make.left.equalTo(self.line).offset(5);
-        //make.right.equalTo(self.line).offset(-5);
+        make.right.offset(-5);
         make.bottom.offset(-8).priorityMedium();
     }];
     

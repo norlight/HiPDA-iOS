@@ -11,6 +11,9 @@
 
 @interface XEJThreadListViewModel : XEJViewModel
 
+@property (nonatomic, copy) NSString *fid;
+@property (nonatomic, copy) NSString *formhash;
+
 @property (nonatomic, copy) NSArray<XEJThreadListCellViewModel *> *dataArray;
 
 @property (nonatomic, strong) RACCommand *fetchDataCommand;

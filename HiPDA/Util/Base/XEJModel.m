@@ -10,4 +10,24 @@
 
 @implementation XEJModel
 
+
+
+- (instancetype)initWithElement:(ONOXMLElement *)element
+{
+    self = [super init];
+    if (self) {
+        [self xej_initialize];
+    }
+    
+    return self;
+}
+
++ (instancetype)modelWithElement:(ONOXMLElement *)element
+{
+    return [[self alloc] initWithElement:element];
+}
+
+- (void)xej_initialize {}
+
+
 @end

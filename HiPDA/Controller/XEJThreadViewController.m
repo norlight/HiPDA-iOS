@@ -20,6 +20,24 @@
 
 @implementation XEJThreadViewController
 
+- (instancetype)init
+{
+    XEJThread *thread = [XEJThread new];
+    thread.tid = @"1905647";
+    XEJThreadViewModel *viewModel = [[XEJThreadViewModel alloc] initWithModel:thread];
+    return [self initWithViewModel:viewModel];
+}
+
+- (instancetype)initWithViewModel:(XEJThreadViewModel *)viewModel
+{
+    self = [super initWithViewModel:viewModel];
+    if (self) {
+        _viewModel = viewModel;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,7 +45,6 @@
 
 - (void)setupViews
 {
-    self.viewModel = [XEJThreadViewModel new];
     self.mainView = ({
         XEJThreadView *view = [[XEJThreadView alloc] initWithViewModel:self.viewModel];
         

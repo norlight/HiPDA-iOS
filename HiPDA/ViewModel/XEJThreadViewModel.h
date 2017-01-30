@@ -7,10 +7,12 @@
 //
 
 #import "XEJViewModel.h"
+#import "XEJThread.h"
 #import "XEJXEJThreadCellViewModel.h"
 
 @interface XEJThreadViewModel : XEJViewModel
 
+@property (nonatomic, strong) XEJThread *model;
 @property (nonatomic, copy) NSArray<XEJXEJThreadCellViewModel *> *dataArray;
 
 @property (nonatomic, strong) RACCommand *fetchDataCommand;

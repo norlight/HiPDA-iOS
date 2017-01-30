@@ -10,4 +10,16 @@
 
 @implementation XEJAvatarViewModel
 
+- (instancetype)initWithModel:(XEJUser *)model
+{
+    _model = model;
+    return [super initWithModel:model];
+}
+
+- (void)xej_initialize
+{
+    self.uid = self.model.uid;
+    self.avatarUrlString = [NSString stringWithFormat:@"%@%@", XEJAvatarBaseUrl, self.model.avatarUrlString];
+}
+
 @end

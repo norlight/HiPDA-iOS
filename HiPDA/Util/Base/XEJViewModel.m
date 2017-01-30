@@ -10,14 +10,26 @@
 
 @implementation XEJViewModel
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone
+
+
+- (instancetype)init
 {
-    XEJViewModel *viewModel = [super allocWithZone:zone];
-    if (viewModel) {
-        [viewModel xej_initialize];
+    self = [super init];
+    if (self) {
+        [self xej_initialize];
     }
     
-    return viewModel;
+    return self;
+}
+
+- (instancetype)initWithModel:(id<XEJModelProtocol>)model
+{
+    self = [super init];
+    if (self) {
+        [self xej_initialize];
+    }
+    
+    return self;
 }
 
 - (void)xej_initialize
