@@ -7,8 +7,11 @@
 //
 
 #import "XEJTableViewCell.h"
-#import "XEJXEJThreadCellViewModel.h"
+
+@class XEJThreadCellViewModel;
 
 @interface XEJThreadCell : XEJTableViewCell
+
+@property (nonatomic, strong) XEJThreadCellViewModel *viewModel;
 
 @end

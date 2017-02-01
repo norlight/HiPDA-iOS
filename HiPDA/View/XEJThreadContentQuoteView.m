@@ -20,9 +20,12 @@
 
 @implementation XEJThreadContentQuoteView
 
+
+
 - (void)setupViews
+
 {
-    self.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
+    self.backgroundColor = XEJGrayColor;
     //self.layer.cornerRadius = 3.0f;
     self.layer.borderWidth = 0.8f;
     self.layer.borderColor = [UIColor colorWithWhite:0.92f alpha:1.0f].CGColor;
@@ -98,6 +101,7 @@
     
     [super updateConstraints];
 }
+
 
 
 

@@ -6,18 +6,19 @@ target 'HiPDA' do
   # use_frameworks!
 
   # Pods for HiPDA
-  pod 'Ono', '1.2.2'
-  pod 'YYKit', '1.0.9'
-  pod 'Masonry', '1.0.2'
-  pod 'BlocksKit', '2.2.5'
-  pod 'DTCoreText', '1.6.19'
-  pod 'ReactiveCocoa', '2.5'
-  pod 'AFNetworking', '3.1.0'
-  pod 'AspectsV1.4.2', '1.4.2'
-  pod 'ReactiveViewModel', '0.3'
-  pod 'HYBUnicodeReadable', '1.3'
-  pod 'RegexKitLite-NoWarning', '1.1.0'
-  pod 'UITableView+FDTemplateLayoutCell', '1.5.beta'
+  pod 'Ono', '~> 1.2.2'
+  pod 'YYKit', '~> 1.0.9'
+  pod 'HTMLKit', '~> 1.1.0'
+  pod 'Masonry', '~> 1.0.2'
+  pod 'BlocksKit', '~> 2.2.5'
+  pod 'DTCoreText', '~> 1.6.19'
+  pod 'ReactiveCocoa', '~> 2.5'
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'AspectsV1.4.2', '~> 1.4.2'
+  pod 'ReactiveViewModel', '~> 0.3'
+  pod 'HYBUnicodeReadable', '~> 1.3'
+  pod 'RegexKitLite-NoWarning', '~> 1.1.0'
+  pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
   
   
   

@@ -23,8 +23,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadListViewController new]];
-    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadListViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
 
     
     

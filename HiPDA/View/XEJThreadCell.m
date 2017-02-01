@@ -14,18 +14,28 @@
 #import "XEJThreadContentImageView.h"
 #import "XEJThreadContentAttachmentView.h"
 #import "XEJThreadContentQuoteView.h"
-#import <Masonry/Masonry.h>
+#import "XEJThreadContentLockedView.h"
+#import "XEJFloorView.h"
 
-@interface XEJThreadCell ()
+#import "XEJThreadCellViewModel.h"
+
+#import <DTCoreText/DTCoreText.h>
+#import <Masonry/Masonry.h>
+#import <YYKit/YYKit.h>
+
+
+@interface XEJThreadCell () <DTAttributedTextContentViewDelegate>
 
 @property (nonatomic, strong) XEJAvatarView *avatarView;
 @property (nonatomic, strong) XEJThreadContentQuoteView *quoteView;
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UILabel *createdAtLabel;
 @property (nonatomic, strong) UILabel *updatedAtLabel;
-@property (nonatomic, strong) UILabel *floorLabel;
+@property (nonatomic, strong) XEJFloorView *floorView;
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, copy) NSArray<UIView *> *threadContentViews;
+
+@property (nonatomic, strong) DTAttributedLabel *bodyLabel;
 
 @end
 
@@ -61,13 +71,11 @@
         [self.contentView addSubview:label];
         label;
     });
-    self.floorLabel = ({
-        UILabel *label = [UILabel new];
-        label.text = @"20";
-        label.font = [UIFont systemFontOfSize:14.0f];
-        label.textColor = [UIColor lightGrayColor];
-        [self.contentView addSubview:label];
-        label;
+    self.floorView = ({
+        XEJFloorView *view = [XEJFloorView new];
+        
+        [self.contentView addSubview:view];
+        view;
     });
     /*
      self.quoteView = ({
@@ -103,15 +111,33 @@
      */
     
     
+    /*
     self.threadContentViews = @[[XEJThreadContentPostStatusView new], [XEJThreadContentTextView new]];
     [self.threadContentViews enumerateObjectsUsingBlock:^(UIView*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.contentView addSubview:obj];
     }];
+     */
  
     /*
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
      */
+    
+    
+    self.bodyLabel = ({
+        NSString *htmlString = @"<br>正文<br>";
+        NSData *data = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
+        NSAttributedString *attrString = [[NSAttributedString alloc] initWithHTMLData:data documentAttributes:NULL];
+        
+        DTAttributedLabel *label = [[DTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_WIDTH_UNKNOWN, CGFLOAT_HEIGHT_UNKNOWN)];
+        label.numberOfLines = 0;
+        label.attributedString = attrString;
+        
+        label.delegate = self;
+        [self.contentView addSubview:label];
+        label;
+    });
+     
 
 }
 
@@ -133,7 +159,7 @@
         make.bottom.equalTo(self.avatarView.mas_bottom).offset(-3);
     }];
     
-    [self.floorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.floorView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.avatarView);
         make.right.offset(-10);
     }];
@@ -160,6 +186,7 @@
     }];
      */
     
+    /*
     [self.threadContentViews enumerateObjectsUsingBlock:^(UIView*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (idx == 0) {
             [obj mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -188,12 +215,22 @@
             }];
         }
     }];
+     */
+    
+    
+    [self.bodyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.avatarView.mas_bottom).offset(20);
+        make.left.offset(10);
+        make.bottom.offset(-5);
+        make.right.offset(-10);
+    }];
+    
     
     [super updateConstraints];
 }
 
 
-- (void)bindViewModel:(XEJXEJThreadCellViewModel *)viewModel
+- (void)bindViewModel:(XEJThreadCellViewModel *)viewModel
 {
     /*
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -206,7 +243,48 @@
         }];
     }];
     */
+    
+    self.viewModel = viewModel;
+    
+    [self.avatarView bindViewModel:viewModel.avatarViewModel];
+    [self.floorView bindViewModel:viewModel.floorViewModel];
+    
+    self.usernameLabel.text = viewModel.username;
+    self.createdAtLabel.text = viewModel.createdAtString;
+
+    self.bodyLabel.attributedString = viewModel.bodyAttrString;
 
 }
+
+
+#pragma mark - DTAttributedTextContentViewDelegate
+- (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttachment:(DTTextAttachment *)attachment frame:(CGRect)frame
+{
+    if ([attachment isKindOfClass:[DTObjectTextAttachment class]]) {
+        NSString *postType = attachment.attributes[@"posttype"];  //注意属性名全会变成小写
+        
+        if ([postType isEqualToString:@"locked"]) {
+            XEJThreadContentLockedView *view = [XEJThreadContentLockedView new];
+            view.frame = frame;
+            return view;
+        }
+    }
+    
+    return nil;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

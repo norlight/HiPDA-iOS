@@ -16,9 +16,9 @@
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, assign) NSInteger floor;
-@property (nonatomic, copy) NSString *slogan;
+//@property (nonatomic, copy) NSString *slogan;
 
-@property (nonatomic, copy) NSString *body;
+@property (nonatomic, copy) NSString *body;  //html
 
 
 @end

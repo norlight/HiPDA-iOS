@@ -57,6 +57,7 @@
 - (void)setupNavigation
 {
     self.title = @"Thread Detail";
+    //RAC(self, title) = RACObserve(self.viewModel, title);
 }
 
 - (void)updateViewConstraints

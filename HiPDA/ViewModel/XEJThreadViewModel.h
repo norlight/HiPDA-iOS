@@ -8,12 +8,15 @@
 
 #import "XEJViewModel.h"
 #import "XEJThread.h"
-#import "XEJXEJThreadCellViewModel.h"
+#import "XEJThreadCellViewModel.h"
 
 @interface XEJThreadViewModel : XEJViewModel
 
 @property (nonatomic, strong) XEJThread *model;
-@property (nonatomic, copy) NSArray<XEJXEJThreadCellViewModel *> *dataArray;
+@property (nonatomic, copy) NSArray<XEJThreadCellViewModel *> *dataArray;
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) NSNumber *pageCount;
 
 @property (nonatomic, strong) RACCommand *fetchDataCommand;
 @property (nonatomic, strong) RACCommand *nextPageCommand;
@@ -21,5 +24,7 @@
 @property (nonatomic, strong) RACSubject *updateUI;
 @property (nonatomic, strong) RACSubject *refreshEndSubject;
 @property (nonatomic, strong) RACSubject *cellSelectedSubject;
+
+- (instancetype)initWithModel:(XEJThread *)model;
 
 @end

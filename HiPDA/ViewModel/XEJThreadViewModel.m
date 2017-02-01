@@ -7,14 +7,13 @@
 //
 
 #import "XEJThreadViewModel.h"
+#import "XEJThreadCellViewModel.h"
 #import "XEJPost.h"
 #import "XEJNetworkManager.h"
 
 
 @interface XEJThreadViewModel ()
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, assign) NSNumber *pageCount;
 @property (nonatomic, assign) NSInteger currentPage;
 
 @end
@@ -23,7 +22,7 @@
 
 
 
-- (instancetype)initWithModel:(id<XEJModelProtocol>)model
+- (instancetype)initWithModel:(XEJThread *)model
 {
     _model = model;
     return [super initWithModel:model];
@@ -35,8 +34,10 @@
     _refreshEndSubject = [RACSubject subject];
     _cellSelectedSubject = [RACSubject subject];
     
-    [[self.fetchDataCommand.executionSignals switchToLatest] subscribeNext:^(id x) {
+    [[self.fetchDataCommand.executionSignals switchToLatest] subscribeNext:^(NSArray<XEJThreadCellViewModel *> *viewModels) {
+        self.dataArray = viewModels;
         
+        [self.updateUI sendNext:nil];
     }];
     [self.fetchDataCommand.errors subscribeNext:^(id x) {
         //
@@ -59,7 +60,7 @@
 - (RACSignal *)viewModelsSignal
 {
     NSString *path = [NSString stringWithFormat:XEJThreadPath, self.model.tid, @(self.currentPage)];
-    return [[[[[[XEJNetworkManager sharedManager] GET:path parameters:nil]
+    return [[[[[[[XEJNetworkManager sharedManager] GET:path parameters:nil]
                flattenMap:^RACStream *(RACTuple *tuple) {
                    NSData *response = tuple.second;
                    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -106,9 +107,16 @@
                 return [[elements.rac_sequence map:^id(ONOXMLElement *element) {
                     return [XEJPost modelWithElement:element];
                 }] array];
+            }]
+            
+            map:^NSArray<XEJThreadCellViewModel *>* (NSArray<XEJPost *>*posts) {
+                return [[posts.rac_sequence map:^id(XEJPost *post) {
+                    return [[XEJThreadCellViewModel alloc] initWithModel:post];
+                }] array];
             }];
     
 }
+
 
 
 

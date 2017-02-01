@@ -8,9 +8,14 @@
 
 #import "XEJThreadView.h"
 #import "XEJThreadViewModel.h"
+
 #import "XEJTableView.h"
 #import "XEJThreadCell.h"
+#import "XEJThreadContentQuoteView.h"
+
+
 #import <Masonry/Masonry.h>
+#import <DTCoreText/DTCoreText.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface XEJThreadView () <UITableViewDataSource, UITableViewDelegate>
@@ -61,16 +66,19 @@
 #pragma mark - UITableViewDataSouuce、Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    //return 3;
     return self.viewModel.dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    return self.viewModel.dataArray[indexPath.row].cellHeight;
+    return 300;
     return [tableView fd_heightForCellWithIdentifier:NSStringFromClass([XEJThreadCell class])
                                        configuration:^(XEJThreadCell *cell) {
                                            [cell bindViewModel:self.viewModel.dataArray[indexPath.row]];
                                        }];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

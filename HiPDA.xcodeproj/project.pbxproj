@@ -27,6 +27,8 @@
 		6668EA791E2BA52600B6AF41 /* XEJThreadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6668EA781E2BA52600B6AF41 /* XEJThreadListCell.m */; };
 		6668EA7C1E2BA72900B6AF41 /* XEJThreadListCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6668EA7B1E2BA72900B6AF41 /* XEJThreadListCellViewModel.m */; };
 		6668EA811E2BB72E00B6AF41 /* XEJNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6668EA801E2BB72E00B6AF41 /* XEJNetworkManager.m */; };
+		669DFC081E41BA210000D3FD /* XEJFloorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 669DFC071E41BA210000D3FD /* XEJFloorView.m */; };
+		669DFC0B1E41BA3F0000D3FD /* XEJFloorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 669DFC0A1E41BA3F0000D3FD /* XEJFloorViewModel.m */; };
 		66A6AD4A1E3236FE0019D536 /* XEJThreadListViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD491E3236FE0019D536 /* XEJThreadListViewModelSpec.m */; };
 		66A6AD4D1E345CC10019D536 /* XEJAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD4C1E345CC10019D536 /* XEJAvatarView.m */; };
 		66A6AD501E345CF00019D536 /* XEJAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD4F1E345CF00019D536 /* XEJAvatarViewModel.m */; };
@@ -34,13 +36,15 @@
 		66A6AD561E34A3FB0019D536 /* XEJThreadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD551E34A3FB0019D536 /* XEJThreadViewModel.m */; };
 		66A6AD591E34A4290019D536 /* XEJThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD581E34A4290019D536 /* XEJThreadCell.m */; };
 		66A6AD5C1E34A8570019D536 /* XEJThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD5B1E34A8570019D536 /* XEJThreadView.m */; };
-		66A6AD5F1E34A8D70019D536 /* XEJXEJThreadCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD5E1E34A8D70019D536 /* XEJXEJThreadCellViewModel.m */; };
+		66A6AD5F1E34A8D70019D536 /* XEJThreadCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD5E1E34A8D70019D536 /* XEJThreadCellViewModel.m */; };
 		66A6AD621E34B9E10019D536 /* XEJThreadContentQuoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD611E34B9E10019D536 /* XEJThreadContentQuoteView.m */; };
 		66A6AD651E34B9FC0019D536 /* XEJThreadContentQuoteViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD641E34B9FC0019D536 /* XEJThreadContentQuoteViewModel.m */; };
 		66A6AD681E3606480019D536 /* XEJForum.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD671E3606480019D536 /* XEJForum.m */; };
 		66A6AD6B1E3606CE0019D536 /* XEJThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD6A1E3606CE0019D536 /* XEJThread.m */; };
 		66A6AD6E1E36073D0019D536 /* XEJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD6D1E36073D0019D536 /* XEJUser.m */; };
 		66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF31E3E384000F46B61 /* XEJPost.m */; };
+		66AF7EF71E40D87C00F46B61 /* XEJThreadContentLockedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF61E40D87C00F46B61 /* XEJThreadContentLockedView.m */; };
+		66AF7EFA1E40D8A100F46B61 /* XEJThreadContentLockedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF91E40D8A100F46B61 /* XEJThreadContentLockedViewModel.m */; };
 		66FEE3041E38AC0B00C25FBB /* XEJThreadContentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3031E38AC0B00C25FBB /* XEJThreadContentTextView.m */; };
 		66FEE3071E38AC1F00C25FBB /* XEJThreadContentImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3061E38AC1F00C25FBB /* XEJThreadContentImageView.m */; };
 		66FEE30A1E38AC3000C25FBB /* XEJThreadContentAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3091E38AC3000C25FBB /* XEJThreadContentAttachmentView.m */; };
@@ -123,6 +127,10 @@
 		6668EA7E1E2BAC2500B6AF41 /* XEJTableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJTableViewCellProtocol.h; sourceTree = "<group>"; };
 		6668EA7F1E2BB72E00B6AF41 /* XEJNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNetworkManager.h; sourceTree = "<group>"; };
 		6668EA801E2BB72E00B6AF41 /* XEJNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJNetworkManager.m; sourceTree = "<group>"; };
+		669DFC061E41BA210000D3FD /* XEJFloorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJFloorView.h; sourceTree = "<group>"; };
+		669DFC071E41BA210000D3FD /* XEJFloorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJFloorView.m; sourceTree = "<group>"; };
+		669DFC091E41BA3F0000D3FD /* XEJFloorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJFloorViewModel.h; sourceTree = "<group>"; };
+		669DFC0A1E41BA3F0000D3FD /* XEJFloorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJFloorViewModel.m; sourceTree = "<group>"; };
 		66A6AD491E3236FE0019D536 /* XEJThreadListViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadListViewModelSpec.m; sourceTree = "<group>"; };
 		66A6AD4B1E345CC10019D536 /* XEJAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJAvatarView.h; sourceTree = "<group>"; };
 		66A6AD4C1E345CC10019D536 /* XEJAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJAvatarView.m; sourceTree = "<group>"; };
@@ -136,8 +144,8 @@
 		66A6AD581E34A4290019D536 /* XEJThreadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadCell.m; sourceTree = "<group>"; };
 		66A6AD5A1E34A8570019D536 /* XEJThreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadView.h; sourceTree = "<group>"; };
 		66A6AD5B1E34A8570019D536 /* XEJThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadView.m; sourceTree = "<group>"; };
-		66A6AD5D1E34A8D70019D536 /* XEJXEJThreadCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJXEJThreadCellViewModel.h; sourceTree = "<group>"; };
-		66A6AD5E1E34A8D70019D536 /* XEJXEJThreadCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJXEJThreadCellViewModel.m; sourceTree = "<group>"; };
+		66A6AD5D1E34A8D70019D536 /* XEJThreadCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadCellViewModel.h; sourceTree = "<group>"; };
+		66A6AD5E1E34A8D70019D536 /* XEJThreadCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadCellViewModel.m; sourceTree = "<group>"; };
 		66A6AD601E34B9E10019D536 /* XEJThreadContentQuoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentQuoteView.h; sourceTree = "<group>"; };
 		66A6AD611E34B9E10019D536 /* XEJThreadContentQuoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadContentQuoteView.m; sourceTree = "<group>"; };
 		66A6AD631E34B9FC0019D536 /* XEJThreadContentQuoteViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentQuoteViewModel.h; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 		66A6AD6D1E36073D0019D536 /* XEJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJUser.m; sourceTree = "<group>"; };
 		66AF7EF21E3E384000F46B61 /* XEJPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJPost.h; sourceTree = "<group>"; };
 		66AF7EF31E3E384000F46B61 /* XEJPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJPost.m; sourceTree = "<group>"; };
+		66AF7EF51E40D87C00F46B61 /* XEJThreadContentLockedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentLockedView.h; sourceTree = "<group>"; };
+		66AF7EF61E40D87C00F46B61 /* XEJThreadContentLockedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadContentLockedView.m; sourceTree = "<group>"; };
+		66AF7EF81E40D8A100F46B61 /* XEJThreadContentLockedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentLockedViewModel.h; sourceTree = "<group>"; };
+		66AF7EF91E40D8A100F46B61 /* XEJThreadContentLockedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadContentLockedViewModel.m; sourceTree = "<group>"; };
 		66FEE3021E38AC0B00C25FBB /* XEJThreadContentTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentTextView.h; sourceTree = "<group>"; };
 		66FEE3031E38AC0B00C25FBB /* XEJThreadContentTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadContentTextView.m; sourceTree = "<group>"; };
 		66FEE3051E38AC1F00C25FBB /* XEJThreadContentImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentImageView.h; sourceTree = "<group>"; };
@@ -302,8 +314,12 @@
 				66A6AD4F1E345CF00019D536 /* XEJAvatarViewModel.m */,
 				66A6AD541E34A3FB0019D536 /* XEJThreadViewModel.h */,
 				66A6AD551E34A3FB0019D536 /* XEJThreadViewModel.m */,
-				66A6AD5D1E34A8D70019D536 /* XEJXEJThreadCellViewModel.h */,
-				66A6AD5E1E34A8D70019D536 /* XEJXEJThreadCellViewModel.m */,
+				66A6AD5D1E34A8D70019D536 /* XEJThreadCellViewModel.h */,
+				66A6AD5E1E34A8D70019D536 /* XEJThreadCellViewModel.m */,
+				669DFC091E41BA3F0000D3FD /* XEJFloorViewModel.h */,
+				669DFC0A1E41BA3F0000D3FD /* XEJFloorViewModel.m */,
+				66AF7EF81E40D8A100F46B61 /* XEJThreadContentLockedViewModel.h */,
+				66AF7EF91E40D8A100F46B61 /* XEJThreadContentLockedViewModel.m */,
 				66FEE3141E38B1E900C25FBB /* XEJThreadContentPostStatusViewModel.h */,
 				66FEE3151E38B1E900C25FBB /* XEJThreadContentPostStatusViewModel.m */,
 				66FEE30B1E38B08F00C25FBB /* XEJThreadContentTextViewModel.h */,
@@ -331,6 +347,10 @@
 				66A6AD5B1E34A8570019D536 /* XEJThreadView.m */,
 				66A6AD571E34A4290019D536 /* XEJThreadCell.h */,
 				66A6AD581E34A4290019D536 /* XEJThreadCell.m */,
+				669DFC061E41BA210000D3FD /* XEJFloorView.h */,
+				669DFC071E41BA210000D3FD /* XEJFloorView.m */,
+				66AF7EF51E40D87C00F46B61 /* XEJThreadContentLockedView.h */,
+				66AF7EF61E40D87C00F46B61 /* XEJThreadContentLockedView.m */,
 				66FEE3171E38B1FC00C25FBB /* XEJThreadContentPostStatusView.h */,
 				66FEE3181E38B1FC00C25FBB /* XEJThreadContentPostStatusView.m */,
 				66FEE3021E38AC0B00C25FBB /* XEJThreadContentTextView.h */,
@@ -763,7 +783,9 @@
 				66FEE30D1E38B08F00C25FBB /* XEJThreadContentTextViewModel.m in Sources */,
 				664057091DF974B1002FC462 /* XEJView.m in Sources */,
 				66A6AD561E34A3FB0019D536 /* XEJThreadViewModel.m in Sources */,
+				66AF7EFA1E40D8A100F46B61 /* XEJThreadContentLockedViewModel.m in Sources */,
 				664057051DF970D2002FC462 /* XEJViewModel.m in Sources */,
+				669DFC081E41BA210000D3FD /* XEJFloorView.m in Sources */,
 				6668EA751E2BA30200B6AF41 /* XEJTableViewCell.m in Sources */,
 				66A6AD4D1E345CC10019D536 /* XEJAvatarView.m in Sources */,
 				66FEE3131E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m in Sources */,
@@ -776,9 +798,11 @@
 				6668EA721E2BA1F800B6AF41 /* XEJTableView.m in Sources */,
 				66FEE3161E38B1E900C25FBB /* XEJThreadContentPostStatusViewModel.m in Sources */,
 				66A6AD621E34B9E10019D536 /* XEJThreadContentQuoteView.m in Sources */,
-				66A6AD5F1E34A8D70019D536 /* XEJXEJThreadCellViewModel.m in Sources */,
+				669DFC0B1E41BA3F0000D3FD /* XEJFloorViewModel.m in Sources */,
+				66A6AD5F1E34A8D70019D536 /* XEJThreadCellViewModel.m in Sources */,
 				6668EA6F1E2B9C0000B6AF41 /* XEJThreadListViewModel.m in Sources */,
 				66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */,
+				66AF7EF71E40D87C00F46B61 /* XEJThreadContentLockedView.m in Sources */,
 				66A6AD5C1E34A8570019D536 /* XEJThreadView.m in Sources */,
 				664056C01DF952C1002FC462 /* main.m in Sources */,
 			);

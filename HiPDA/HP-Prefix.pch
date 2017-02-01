@@ -21,7 +21,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
-//A better version of NSLog
+#pragma mark - A better version of NSLog
 #define NSLog(format, ...) do {                                             \
 fprintf(stderr, "<%s : Line %d> %s\n",                                      \
 [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
@@ -30,6 +30,11 @@ __LINE__, __func__);                                                        \
 fprintf(stderr, "-------\n");                                               \
 } while (0)
 
+
+
+#pragma mark - Screen Size
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
 
 
@@ -57,7 +62,7 @@ fprintf(stderr, "-------\n");                                               \
 
 #pragma mark - Colors
 #define XEJMainColor [UIColor colorWithRed:0.0f green:0.5f blue:0.9f alpha:1.0f]
-
+#define XEJGrayColor [UIColor colorWithWhite:0.95f alpha:1.0f]
 
 
 
