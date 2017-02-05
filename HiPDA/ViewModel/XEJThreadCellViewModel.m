@@ -7,14 +7,18 @@
 //
 
 #import "XEJThreadCellViewModel.h"
-#import "XEJUser.h"
 #import "XEJAvatarViewModel.h"
 #import "XEJFloorViewModel.h"
+#import "XEJLockedObjectViewModel.h"
+#import "XEJPostStatusObjectViewModel.h"
+#import "XEJReplyObjectViewModel.h"
 
 #import "XEJPost.h"
+#import "XEJUser.h"
 
 #import "XEJDateFormatter.h"
 
+#import <RegexKitLite-NoWarning/RegexKitLite.h>
 #import <DTCoreText/DTCoreText.h>
 #import <HTMLKit/HTMLKit.h>
 #import <YYKit/YYKit.h>
@@ -46,31 +50,97 @@
     
     
     //流程：1.Ono-string，提取；2.HTMLKit-string，编辑、清理；3.DTCoreText-attrString，显示
-    NSString *html;
+    //原始HTML转为HTMLElement进行处理，最后再取出HTML进行显示
+    
     HTMLDocument *doc = [HTMLDocument documentWithString:model.body];
-    //正常内容
-    NSString *postMessageSelector = @"div.t_msgfontfix table tbody tr td.t_msgfont";
+    
+    //处理特殊状态的楼层（被屏蔽、投票等）
+    NSString *postMessageSelector = @"div.t_msgfontfix table tbody tr td.t_msgfont";  //正常内容
     HTMLElement *postMessage = [doc querySelector:postMessageSelector];
     if (!postMessage) {
-        //楼层被屏蔽
+        //如果获取不到正常内容，则楼层可能被屏蔽，或者为投票贴，投票贴则不止主楼该页全部楼层都会是另一个选择器
         NSString *lockedSelector = @"div.locked";
-        HTMLElement *locked = [doc querySelector:lockedSelector];
+        HTMLElement *lockedElement = [doc querySelector:lockedSelector];
 
-        if (locked) {
-            HTMLElement *element = [[HTMLElement alloc] initWithTagName:@"object"
-                                                             attributes:@{@"style" : @"display:block;",
-                                                                          @"width" : @"300",
-                                                                          @"height" : @"80",
-                                                                          @"postType" : @"locked",
-                                                                          }];
-            [element appendNode:locked];
-            html = element.outerHTML;
-            NSLog(@"%@", html);
-            
+        
+        if (lockedElement) {
+            //帖子被屏蔽
+            XEJLocked *model = [[XEJLocked alloc] initWithElement:lockedElement];
+            XEJLockedObjectViewModel *viewModel = [[XEJLockedObjectViewModel alloc] initWithModel:model];
+            HTMLElement *objectElement = viewModel.objectElement;
+            postMessage = objectElement;
+        } else {
+            //投票贴
+            NSString *postMessageSelector = @"div.specialmsg table tbody tr td.t_msgfont";  //各楼层内容，顶楼投票部分单独有一个form，暂不处理，只显示内容不显示投票
+            //NSString *pollFormSelector = @"form#poll";
+            postMessage = [doc querySelector:postMessageSelector];
         }
-    } else {
-        html = model.body;
+        
     }
+    
+    //除了正常内容、被屏蔽、投票外的其他情况
+    if (!postMessage) {
+        //
+        NSLog(@"%@", @"[[无内容，帖子可能已被移除]]");
+    }
+    
+    
+    //开始处理postMessage内的特殊内容，图片、附件、链接等
+    
+    //post status
+    NSString *postStatusSelector = @"i.pstatus";
+    HTMLElement *postStatusElement = [postMessage querySelector:postStatusSelector];
+    if (postStatusElement) {
+        XEJPostStatus *model = [[XEJPostStatus alloc] initWithElement:postStatusElement];
+        XEJPostStatusObjectViewModel *viewModel = [[XEJPostStatusObjectViewModel alloc] initWithModel:model];
+        _postStatusObjectViewModel = viewModel;
+        
+        [postMessage replaceChildNode:postStatusElement withNode:viewModel.objectElement];
+    }
+    
+    //reply
+    NSString *replySelector = @"strong";
+    HTMLElement *replyElement = [postMessage querySelector:replySelector];
+    if (replyElement && [replyElement.textContent isMatchedByRegex:@"回复.*\\d+#.*"]) {
+        
+        [replyElement removeFromParentNode];
+        
+        //去除开头多余空白行、首行缩进
+        NSString *innerHTML = postMessage.innerHTML;
+        __block NSInteger currentIndex = 0;
+        __block BOOL match = YES;
+        NSArray<NSString *> *blanks = @[@"<br>",
+                                        @"\r",  //回车
+                                        @"\n",  //换行
+                                        @"\t",  //Tab
+                                        @"\u00A0",  //不换行空格(No-Break Space)，HTML-&nbsp; 实体编码：160
+                                        @"\x20"  //普通半角空格
+                                        ];
+        while (match) {
+            match = NO;
+            [blanks enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (innerHTML.length > currentIndex + obj.length &&[[innerHTML substringWithRange:NSMakeRange(currentIndex, obj.length)] isEqualToString:obj]) {
+                    currentIndex += obj.length;
+                    match = YES;
+                    *stop = YES;
+                }
+            }];
+        }
+        
+        if (currentIndex > 0) {
+            postMessage.innerHTML = [innerHTML substringFromIndex:currentIndex];
+        }
+       
+        
+        XEJReply *model = [[XEJReply alloc] initWithElement:replyElement];
+        XEJReplyObjectViewModel *viewModel = [[XEJReplyObjectViewModel alloc] initWithModel:model];
+        _replyObjectViewModel = viewModel;
+        
+        //[postMessage replaceChildNode:replyElement withNode:viewModel.objectElement];
+        [postMessage insertNode:viewModel.objectElement beforeChildNode:postMessage.firstChild];
+    }
+     
+    
 
     
     
@@ -79,7 +149,8 @@
     
     
     
-    //NSString *html = model.body;
+    //NSString *html = model.body;  //原始HTML
+    NSString *html = postMessage.outerHTML;
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
     
     CGSize maxImageSize = CGSizeMake(SCREENWIDTH - 20.0, CGFLOAT_HEIGHT_UNKNOWN);

@@ -6,10 +6,33 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJThreadContentLockedViewModel.h"
-#import <YYKit/YYKit.h>
+#import "XEJLockedObjectViewModel.h"
 
-@implementation XEJThreadContentLockedViewModel
+#import <YYKit/YYKit.h>
+#import <HTMLKit/HTMLKit.h>
+
+@interface XEJLockedObjectViewModel ()
+
+//@property (nonatomic, strong) HTMLElement *element;
+
+
+@end
+
+@implementation XEJLockedObjectViewModel
+
+/*
+- (instancetype)initWithElement:(HTMLElement *)element
+{
+    _element = element;
+    return [super initWithElement:element];
+}
+ */
+
+- (instancetype)initWithModel:(XEJLocked *)model
+{
+    _model = model;
+    return [super initWithModel:model];
+}
 
 - (void)xej_initialize
 {
@@ -21,13 +44,14 @@
     
     
     NSAttributedString *attrText = self.attrText;
-    CGSize containerSize = CGSizeMake(SCREENWIDTH - 20, CGFLOAT_MAX);
+    CGSize containerSize = CGSizeMake(SCREENWIDTH - 16, CGFLOAT_MAX);
     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:containerSize text:attrText];
     //CGRect attrTextRect = layout.textBoundingRect;
     CGSize attrTextSize = layout.textBoundingSize;
     
     //文本的高度计算可能存在少许误差，加2个点做下补充
-    CGFloat width = _borderWidth * 2 + fabs(_insets.left) + fabs(_insets.right) + attrTextSize.width + 2;
+    //CGFloat width = _borderWidth * 2 + fabs(_insets.left) + fabs(_insets.right) + attrTextSize.width + 2;
+    CGFloat width = SCREENWIDTH - 16;
     CGFloat height = _borderWidth * 2 + fabs(_insets.top) + fabs(_insets.bottom) + attrTextSize.height + 2;
     _size = CGSizeMake(width, height);
 }
@@ -64,6 +88,23 @@
     
     return _attrText;
 }
+
+- (HTMLElement *)objectElement
+{
+    if (!_objectElement) {
+        HTMLElement *objectElement = [[HTMLElement alloc] initWithTagName:@"object"
+                                                               attributes:@{@"style" : @"display:block;",
+                                                                            @"width" : [NSString stringWithFormat:@"%f", _size.width],
+                                                                            @"height" : [NSString stringWithFormat:@"%f", _size.height],
+                                                                            @"postType" : @"locked",
+                                                                            }];
+        [objectElement appendNode:[_model.element cloneNodeDeep:YES]];
+        _objectElement = objectElement;
+    }
+    
+    return _objectElement;
+}
+
 
 
 @end

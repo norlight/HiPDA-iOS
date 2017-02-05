@@ -24,6 +24,7 @@
 {
     XEJThread *thread = [XEJThread new];
     thread.tid = @"1905647";
+    //thread.tid = @"1890514";
     XEJThreadViewModel *viewModel = [[XEJThreadViewModel alloc] initWithModel:thread];
     return [self initWithViewModel:viewModel];
 }

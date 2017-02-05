@@ -12,7 +12,7 @@
 
 
 
-- (instancetype)initWithElement:(ONOXMLElement *)element
+- (instancetype)initWithElement:(id)element
 {
     self = [super init];
     if (self) {
@@ -22,7 +22,7 @@
     return self;
 }
 
-+ (instancetype)modelWithElement:(ONOXMLElement *)element
++ (instancetype)modelWithElement:(id)element
 {
     return [[self alloc] initWithElement:element];
 }

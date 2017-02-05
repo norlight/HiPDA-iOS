@@ -6,9 +6,12 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJViewModel.h"
+#import "XEJObjectViewModel.h"
+#import "XEJLocked.h"
 
-@interface XEJThreadContentLockedViewModel : XEJViewModel
+@interface XEJLockedObjectViewModel : XEJObjectViewModel
+
+@property (nonatomic, strong) XEJLocked *model;
 
 @property (nonatomic, strong) UIImage *attachment;
 @property (nonatomic, copy) NSString *text;
@@ -17,5 +20,7 @@
 @property (nonatomic, assign) CGFloat borderWidth;  //描边大小
 @property (nonatomic, assign) UIEdgeInsets insets;  //描边内嵌大小
 @property (nonatomic, assign) CGSize size;
+
+@property (nonatomic, strong) HTMLElement *objectElement;
 
 @end

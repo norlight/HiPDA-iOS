@@ -8,11 +8,11 @@
 
 #import "XEJView.h"
 
-@class XEJThreadContentLockedViewModel;
+@class XEJLockedObjectViewModel;
 
-@interface XEJThreadContentLockedView : XEJView
+@interface XEJLockedObjectView : XEJView
 
-@property (nonatomic, strong) XEJThreadContentLockedViewModel *viewModel;
+@property (nonatomic, strong) XEJLockedObjectViewModel *viewModel;
 
 
 @end

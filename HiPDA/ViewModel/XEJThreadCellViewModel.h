@@ -12,12 +12,20 @@
 @class XEJAvatarViewModel;
 @class XEJFloorViewModel;
 
+@class XEJLockedObjectViewModel;
+@class XEJPostStatusObjectViewModel;
+@class XEJReplyObjectViewModel;
+
 @interface XEJThreadCellViewModel : XEJViewModel
 
 @property (nonatomic, strong) XEJPost *model;
 
 @property (nonatomic, strong) XEJAvatarViewModel *avatarViewModel;
 @property (nonatomic, strong) XEJFloorViewModel *floorViewModel;
+
+@property (nonatomic, strong) XEJLockedObjectViewModel *lockedObjectViewModel;
+@property (nonatomic, strong) XEJPostStatusObjectViewModel *postStatusObjectViewModel;
+@property (nonatomic, strong) XEJReplyObjectViewModel *replyObjectViewModel;
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *username;

@@ -16,7 +16,7 @@ target 'HiPDA' do
   pod 'AFNetworking', '~> 3.1.0'
   pod 'AspectsV1.4.2', '~> 1.4.2'
   pod 'ReactiveViewModel', '~> 0.3'
-  pod 'HYBUnicodeReadable', '~> 1.3'
+  #pod 'HYBUnicodeReadable', '~> 1.3'
   pod 'RegexKitLite-NoWarning', '~> 1.1.0'
   pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
   

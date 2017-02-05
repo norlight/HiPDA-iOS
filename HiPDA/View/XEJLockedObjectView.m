@@ -6,22 +6,22 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJThreadContentLockedView.h"
-#import "XEJThreadContentLockedViewModel.h"
+#import "XEJLockedObjectView.h"
+#import "XEJLockedObjectViewModel.h"
 #import <YYKit/YYKit.h>
 #import <Masonry/Masonry.h>
 
-@interface XEJThreadContentLockedView ()
+@interface XEJLockedObjectView ()
 
 @property (nonatomic, strong) YYLabel *lockedLabel;
 
 @end
 
-@implementation XEJThreadContentLockedView
+@implementation XEJLockedObjectView
 
 - (instancetype)init
 {
-    XEJThreadContentLockedViewModel *viewModel = [XEJThreadContentLockedViewModel new];
+    XEJLockedObjectViewModel *viewModel = [XEJLockedObjectViewModel new];
     return [self initWithViewModel:viewModel];
 }
 
@@ -42,7 +42,7 @@
 }
 
 
-- (void)bindViewModel:(XEJThreadContentLockedViewModel *)viewModel
+- (void)bindViewModel:(XEJLockedObjectViewModel *)viewModel
 {
     self.viewModel = viewModel;
     

@@ -6,10 +6,10 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJThreadContentQuoteView.h"
+#import "XEJQuoteObjectView.h"
 #import <Masonry/Masonry.h>
 
-@interface XEJThreadContentQuoteView ()
+@interface XEJQuoteObjectView ()
 
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UILabel *floorLabel;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation XEJThreadContentQuoteView
+@implementation XEJQuoteObjectView
 
 
 
@@ -78,12 +78,12 @@
 {
     [self.usernameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(8);
-        make.left.offset(5);
+        make.left.offset(8);
     }];
     
     [self.floorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.usernameLabel);
-        make.right.offset(-5);
+        make.right.offset(-8);
     }];
     
     [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -94,8 +94,8 @@
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.line.mas_bottom).offset(8);
-        make.left.equalTo(self.line).offset(5);
-        make.right.offset(-5);
+        make.left.equalTo(self.line).offset(8);
+        make.right.offset(-8);
         make.bottom.offset(-8).priorityMedium();
     }];
     

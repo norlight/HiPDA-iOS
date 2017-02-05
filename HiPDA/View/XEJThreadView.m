@@ -11,7 +11,7 @@
 
 #import "XEJTableView.h"
 #import "XEJThreadCell.h"
-#import "XEJThreadContentQuoteView.h"
+#import "XEJQuoteObjectView.h"
 
 
 #import <Masonry/Masonry.h>

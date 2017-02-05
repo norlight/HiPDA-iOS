@@ -12,8 +12,8 @@
 @protocol XEJModelProtocol <NSObject>
 
 @optional
-- (instancetype)initWithElement:(ONOXMLElement *)element;
-+ (instancetype)modelWithElement:(ONOXMLElement *)element;
+- (instancetype)initWithElement:(id)element;
++ (instancetype)modelWithElement:(id)element;
 
 - (void)xej_initialize;
 
