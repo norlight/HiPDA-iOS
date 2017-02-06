@@ -88,4 +88,9 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.viewModel.cellSelectedSubject sendNext:indexPath];
+}
+
 @end

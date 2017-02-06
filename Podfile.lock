@@ -60,7 +60,13 @@ PODS:
     - ReactiveCocoa/Core
   - ReactiveViewModel (0.3):
     - ReactiveCocoa (~> 2.4)
+  - REFormattedNumberField (1.1.6)
   - RegexKitLite-NoWarning (1.1.0)
+  - RETableViewManager (1.7):
+    - REFormattedNumberField (~> 1.1.5)
+    - REValidation (~> 0.1.4)
+  - REValidation (0.1.4)
+  - SAMKeychain (1.5.2)
   - UITableView+FDTemplateLayoutCell (1.5.beta)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -78,6 +84,8 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.5)
   - ReactiveViewModel (~> 0.3)
   - RegexKitLite-NoWarning (~> 1.1.0)
+  - RETableViewManager (~> 1.7)
+  - SAMKeychain (~> 1.5.2)
   - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
   - YYKit (~> 1.0.9)
 
@@ -93,10 +101,14 @@ SPEC CHECKSUMS:
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
+  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 45ea41c2223a2f4ea0dbcce2b77dd3a71108e732
+PODFILE CHECKSUM: a219db4ccffaf56d9e4a0e3d1202247f2600bde9
 
 COCOAPODS: 1.1.1

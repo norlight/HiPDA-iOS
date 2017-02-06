@@ -12,10 +12,6 @@
 
 SPEC_BEGIN(XEJThreadListViewModelSpec)
 
-describe(@"XEJThreadListViewModel", ^{
 
-    
-
-});
 
 SPEC_END

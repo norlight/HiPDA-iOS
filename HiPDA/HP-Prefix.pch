@@ -30,6 +30,9 @@ __LINE__, __func__);                                                        \
 fprintf(stderr, "-------\n");                                               \
 } while (0)
 
+//狗每次看到都想死的macro们
+#define XEJAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
 
 
 #pragma mark - Screen Size

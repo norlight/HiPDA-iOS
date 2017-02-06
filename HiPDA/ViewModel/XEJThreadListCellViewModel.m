@@ -26,10 +26,9 @@
     self.titleColor = model.titleColor;
     self.username = model.author.username;
     self.createdAtString = [XEJDateFormatter stringFromDate:model.createdAt];
-    NSLog(@"%@", self.createdAtString);
-    self.replyCountString = [NSString stringWithFormat:@"%ld", model.replyCount];
-    self.viewCountString = [NSString stringWithFormat:@"%ld", model.viewCount];
-    self.pageCountString = [NSString stringWithFormat:@"%ld", model.pageCount];
+    self.replyCountString = [NSString stringWithFormat:@"%ld", (long)model.replyCount];
+    self.viewCountString = [NSString stringWithFormat:@"%ld", (long)model.viewCount];
+    self.pageCountString = [NSString stringWithFormat:@"%ld", (long)model.pageCount];
     self.hasImageAttach = model.hasImageAttach;
     self.hasCommonAttach = model.hasCommonAttach;
     self.agreed = model.agreed;

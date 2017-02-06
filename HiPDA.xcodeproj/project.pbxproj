@@ -52,6 +52,8 @@
 		66A8DFF61E45B3E8000BE2C5 /* XEJReplyObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8DFF51E45B3E8000BE2C5 /* XEJReplyObjectViewModel.m */; };
 		66A8DFF91E45B82B000BE2C5 /* XEJReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8DFF81E45B82B000BE2C5 /* XEJReply.m */; };
 		66A8DFFC1E46E158000BE2C5 /* XEJQuoteObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8DFFB1E46E158000BE2C5 /* XEJQuoteObjectViewModel.m */; };
+		66A8E0071E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0061E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m */; };
+		66A8E00A1E48823B000BE2C5 /* XEJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0091E48823B000BE2C5 /* XEJNavigationController.m */; };
 		66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF31E3E384000F46B61 /* XEJPost.m */; };
 		66AF7EF71E40D87C00F46B61 /* XEJLockedObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF61E40D87C00F46B61 /* XEJLockedObjectView.m */; };
 		66AF7EFA1E40D8A100F46B61 /* XEJLockedObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF91E40D8A100F46B61 /* XEJLockedObjectViewModel.m */; };
@@ -185,6 +187,11 @@
 		66A8DFF81E45B82B000BE2C5 /* XEJReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJReply.m; sourceTree = "<group>"; };
 		66A8DFFA1E46E158000BE2C5 /* XEJQuoteObjectViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJQuoteObjectViewModel.h; sourceTree = "<group>"; };
 		66A8DFFB1E46E158000BE2C5 /* XEJQuoteObjectViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJQuoteObjectViewModel.m; sourceTree = "<group>"; };
+		66A8E0051E4880C3000BE2C5 /* XEJNavigationControllerStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNavigationControllerStackManager.h; sourceTree = "<group>"; };
+		66A8E0061E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJNavigationControllerStackManager.m; sourceTree = "<group>"; };
+		66A8E0081E48823B000BE2C5 /* XEJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNavigationController.h; sourceTree = "<group>"; };
+		66A8E0091E48823B000BE2C5 /* XEJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJNavigationController.m; sourceTree = "<group>"; };
+		66A8E00B1E48868E000BE2C5 /* XEJNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNavigationProtocol.h; sourceTree = "<group>"; };
 		66AF7EF21E3E384000F46B61 /* XEJPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJPost.h; sourceTree = "<group>"; };
 		66AF7EF31E3E384000F46B61 /* XEJPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJPost.m; sourceTree = "<group>"; };
 		66AF7EF51E40D87C00F46B61 /* XEJLockedObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLockedObjectView.h; sourceTree = "<group>"; };
@@ -455,6 +462,7 @@
 				664056FF1DF97053002FC462 /* XEJModel.h */,
 				664057001DF97053002FC462 /* XEJModel.m */,
 				664057021DF970C0002FC462 /* XEJViewModelProtocol.h */,
+				66A8E00B1E48868E000BE2C5 /* XEJNavigationProtocol.h */,
 				664057031DF970D2002FC462 /* XEJViewModel.h */,
 				664057041DF970D2002FC462 /* XEJViewModel.m */,
 				664057061DF973DD002FC462 /* XEJViewProtocol.h */,
@@ -468,6 +476,8 @@
 				6640570A1DF9788F002FC462 /* XEJViewControllerProtocol.h */,
 				6640570B1DF97A12002FC462 /* XEJViewController.h */,
 				6640570C1DF97A12002FC462 /* XEJViewController.m */,
+				66A8E0081E48823B000BE2C5 /* XEJNavigationController.h */,
+				66A8E0091E48823B000BE2C5 /* XEJNavigationController.m */,
 				66A8DFE61E448507000BE2C5 /* XEJObjectViewModelProtocol.h */,
 				669DFC121E42E20E0000D3FD /* XEJObjectViewModel.h */,
 				669DFC131E42E20E0000D3FD /* XEJObjectViewModel.m */,
@@ -496,6 +506,8 @@
 		664056FD1DF95FD0002FC462 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				66A8E0051E4880C3000BE2C5 /* XEJNavigationControllerStackManager.h */,
+				66A8E0061E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m */,
 				6668EA7F1E2BB72E00B6AF41 /* XEJNetworkManager.h */,
 				6668EA801E2BB72E00B6AF41 /* XEJNetworkManager.m */,
 			);
@@ -835,6 +847,7 @@
 				664057051DF970D2002FC462 /* XEJViewModel.m in Sources */,
 				669DFC081E41BA210000D3FD /* XEJFloorView.m in Sources */,
 				6668EA751E2BA30200B6AF41 /* XEJTableViewCell.m in Sources */,
+				66A8E0071E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m in Sources */,
 				66A8DFE91E4486E1000BE2C5 /* XEJPostStatus.m in Sources */,
 				66A6AD4D1E345CC10019D536 /* XEJAvatarView.m in Sources */,
 				66FEE3131E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m in Sources */,
@@ -855,6 +868,7 @@
 				66AF7EF71E40D87C00F46B61 /* XEJLockedObjectView.m in Sources */,
 				66A6AD5C1E34A8570019D536 /* XEJThreadView.m in Sources */,
 				664056C01DF952C1002FC462 /* main.m in Sources */,
+				66A8E00A1E48823B000BE2C5 /* XEJNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,7 +1012,7 @@
 				INFOPLIST_FILE = HiPDA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ej.HiPDA;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.erjie.HiPDA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1012,7 +1026,7 @@
 				INFOPLIST_FILE = HiPDA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ej.HiPDA;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.erjie.HiPDA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

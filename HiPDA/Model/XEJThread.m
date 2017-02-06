@@ -21,6 +21,16 @@
 
 @implementation XEJThread
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _tid = @"1905647";
+    }
+    
+    return self;
+}
+
 - (instancetype)initWithElement:(ONOXMLElement *)element
 {
     _element = element;

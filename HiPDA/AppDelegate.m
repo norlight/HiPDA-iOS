@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "XEJThreadListViewController.h"
-#import "XEJThreadViewController.h"
+#import "XEJThreadViewModel.h"
+#import "XEJThreadListViewModel.h"
+#import "XEJNavigationControllerStackManager.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,9 @@
     [self.window makeKeyAndVisible];
     
     //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadListViewController new]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
+    XEJThreadListViewModel *viewModel = [XEJThreadListViewModel new];
+    [[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
 
     
     

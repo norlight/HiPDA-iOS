@@ -7,6 +7,7 @@
 //
 
 #import "XEJThreadListViewModel.h"
+#import "XEJThreadViewModel.h"
 #import "XEJThread.h"
 #import "XEJNetworkManager.h"
 #import <Ono/Ono.h>
@@ -31,33 +32,24 @@
 
 - (void)xej_initialize
 {
+    @weakify(self);
     _updateUI = [RACSubject subject];
     _refreshEndSubject = [RACSubject subject];
     _cellSelectedSubject = [RACSubject subject];
+    
+    [_cellSelectedSubject subscribeNext:^(NSIndexPath *indexPath) {
+        @strongify(self);
+        XEJThreadListCellViewModel *cellViewModel = self.dataArray[indexPath.row];
+        XEJThreadViewModel *viewModel = [[XEJThreadViewModel alloc] initWithModel:cellViewModel.model];
+        [self pushViewModel:viewModel animated:YES];
+    }];
  
     [[self.fetchDataCommand.executionSignals switchToLatest] subscribeNext:^(NSArray<XEJThreadListCellViewModel *> *viewModels) {
-        //
-        /*
-        NSLog(@"总数：%ld", threads.count);
-        [threads enumerateObjectsUsingBlock:^(XEJThread * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSLog(@"置顶：%d", obj.stick);
-            NSLog(@"tid:%@", obj.tid);
-            NSLog(@"标题：%@", obj.title);
-            NSLog(@"颜色：%@", obj.titleColor);
-            NSLog(@"日期：%@", obj.createdAt);
-            NSLog(@"回复：%ld", obj.replyCount);
-            NSLog(@"查看：%ld", obj.viewCount);
-            NSLog(@"页数：%ld", obj.pageCount);
-            NSLog(@"图片：%d", obj.hasImageAttach);
-            NSLog(@"附件：%d", obj.hasCommonAttach);
-            NSLog(@"评分：%d", obj.agreed);
-            NSLog(@"精华：%d", obj.digested);
-        }];
-         */
+
         
         self.dataArray = viewModels;
         
-        [self.updateUI sendNext:nil];
+        [self.updateUI sendNext:self];
     }];
     [self.fetchDataCommand.errors subscribeNext:^(NSError *error) {
         //

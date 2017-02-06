@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "XEJViewModelProtocol.h"
+#import "XEJNavigationProtocol.h"
 #import <ReactiveViewModel/ReactiveViewModel.h>
 
-@interface XEJViewModel : NSObject <XEJViewModelProtocol>
+@interface XEJViewModel : NSObject <XEJViewModelProtocol, XEJNavigationProtocol>
 
 @end

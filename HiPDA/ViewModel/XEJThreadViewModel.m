@@ -20,7 +20,11 @@
 
 @implementation XEJThreadViewModel
 
-
+- (instancetype)init
+{
+    _model = [XEJThread new];
+    return [super init];
+}
 
 - (instancetype)initWithModel:(XEJThread *)model
 {

@@ -44,6 +44,13 @@
 }
 
 
+#pragma mark - XEJNavigationProtocol
+- (void)pushViewModel:(XEJViewModel *)viewModel animated:(BOOL)animated {}
+- (void)popViewModelAnimated:(BOOL)animated {}
+- (void)popToRootViewModelAnimated:(BOOL)animated {}
+- (void)presentViewModel:(XEJViewModel *)viewModel animated:(BOOL)animated completion:(void(^)())completion {}
+- (void)dismissViewModelAnimated:(BOOL)animated completion:(void(^)())completion {}
+- (void)resetRootViewModel:(XEJViewModel *)viewModel {}
 
 
 
