@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		445787FAEEF2D09DAD0A69FF /* libPods-HiPDAUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD915094196749861FDC81C /* libPods-HiPDAUITests.a */; };
+		020EE6E602A71AEDD49F2720 /* libPods-HiPDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1CD2084DF3EA108206BD86 /* libPods-HiPDA.a */; };
 		664056C01DF952C1002FC462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056BF1DF952C1002FC462 /* main.m */; };
 		664056C31DF952C1002FC462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056C21DF952C1002FC462 /* AppDelegate.m */; };
 		664056C61DF952C1002FC462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664056C51DF952C1002FC462 /* ViewController.m */; };
@@ -54,9 +54,16 @@
 		66A8DFFC1E46E158000BE2C5 /* XEJQuoteObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8DFFB1E46E158000BE2C5 /* XEJQuoteObjectViewModel.m */; };
 		66A8E0071E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0061E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m */; };
 		66A8E00A1E48823B000BE2C5 /* XEJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0091E48823B000BE2C5 /* XEJNavigationController.m */; };
+		66A8E0131E49864F000BE2C5 /* XEJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0121E49864F000BE2C5 /* XEJLoginViewController.m */; };
+		66A8E02F1E49C944000BE2C5 /* XEJLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E02E1E49C944000BE2C5 /* XEJLoginViewModel.m */; };
+		66A8E0321E49D31F000BE2C5 /* XEJAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A8E0311E49D31F000BE2C5 /* XEJAccountManager.m */; };
 		66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF31E3E384000F46B61 /* XEJPost.m */; };
 		66AF7EF71E40D87C00F46B61 /* XEJLockedObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF61E40D87C00F46B61 /* XEJLockedObjectView.m */; };
 		66AF7EFA1E40D8A100F46B61 /* XEJLockedObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF91E40D8A100F46B61 /* XEJLockedObjectViewModel.m */; };
+		66FB656A1E4B21B70010167F /* XEJRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB65691E4B21B70010167F /* XEJRevealViewController.m */; };
+		66FB656D1E4B22140010167F /* XEJRevealViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB656C1E4B22140010167F /* XEJRevealViewModel.m */; };
+		66FB65701E4B236F0010167F /* XEJRearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB656F1E4B236F0010167F /* XEJRearViewController.m */; };
+		66FB65731E4B23890010167F /* XEJRearViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB65721E4B23890010167F /* XEJRearViewModel.m */; };
 		66FEE3041E38AC0B00C25FBB /* XEJThreadContentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3031E38AC0B00C25FBB /* XEJThreadContentTextView.m */; };
 		66FEE3071E38AC1F00C25FBB /* XEJThreadContentImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3061E38AC1F00C25FBB /* XEJThreadContentImageView.m */; };
 		66FEE30A1E38AC3000C25FBB /* XEJThreadContentAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3091E38AC3000C25FBB /* XEJThreadContentAttachmentView.m */; };
@@ -65,8 +72,8 @@
 		66FEE3131E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE3121E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m */; };
 		66FEE31C1E39DE1600C25FBB /* XEJUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE31B1E39DE1600C25FBB /* XEJUtility.m */; };
 		66FEE31F1E39E0D000C25FBB /* XEJDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE31E1E39E0D000C25FBB /* XEJDateFormatter.m */; };
-		9BC0FC8654F480580BF7327F /* libPods-HiPDATests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEE8E71AFB9903BBAA91421 /* libPods-HiPDATests.a */; };
-		E3C1CB135FFCB84CD839E73D /* libPods-HiPDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABCF2BFDA61507CBA1952EE /* libPods-HiPDA.a */; };
+		92594CDF7846BDFFEB8F1960 /* libPods-HiPDAUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0337D4DF42A24E6BE01423A4 /* libPods-HiPDAUITests.a */; };
+		F00A82E78269D615EE8F1F47 /* libPods-HiPDATests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101BB9DC14015E7E549878F /* libPods-HiPDATests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +94,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0337D4DF42A24E6BE01423A4 /* libPods-HiPDAUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDAUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1C3693FCBAB8FC425FA67E /* Pods-HiPDATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDATests/Pods-HiPDATests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D66E40ED3BF18EB7ADE5DC4 /* Pods-HiPDAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDAUITests/Pods-HiPDAUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3ABCF2BFDA61507CBA1952EE /* libPods-HiPDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CD915094196749861FDC81C /* libPods-HiPDAUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDAUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1CD2084DF3EA108206BD86 /* libPods-HiPDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B76495F25C417DB891E8E1 /* Pods-HiPDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDA.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDA/Pods-HiPDA.release.xcconfig"; sourceTree = "<group>"; };
 		664056BB1DF952C1002FC462 /* HiPDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiPDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664056BF1DF952C1002FC462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,12 +199,26 @@
 		66A8E0081E48823B000BE2C5 /* XEJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNavigationController.h; sourceTree = "<group>"; };
 		66A8E0091E48823B000BE2C5 /* XEJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJNavigationController.m; sourceTree = "<group>"; };
 		66A8E00B1E48868E000BE2C5 /* XEJNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJNavigationProtocol.h; sourceTree = "<group>"; };
+		66A8E0111E49864F000BE2C5 /* XEJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLoginViewController.h; sourceTree = "<group>"; };
+		66A8E0121E49864F000BE2C5 /* XEJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLoginViewController.m; sourceTree = "<group>"; };
+		66A8E02D1E49C944000BE2C5 /* XEJLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLoginViewModel.h; sourceTree = "<group>"; };
+		66A8E02E1E49C944000BE2C5 /* XEJLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLoginViewModel.m; sourceTree = "<group>"; };
+		66A8E0301E49D31F000BE2C5 /* XEJAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJAccountManager.h; sourceTree = "<group>"; };
+		66A8E0311E49D31F000BE2C5 /* XEJAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJAccountManager.m; sourceTree = "<group>"; };
 		66AF7EF21E3E384000F46B61 /* XEJPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJPost.h; sourceTree = "<group>"; };
 		66AF7EF31E3E384000F46B61 /* XEJPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJPost.m; sourceTree = "<group>"; };
 		66AF7EF51E40D87C00F46B61 /* XEJLockedObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLockedObjectView.h; sourceTree = "<group>"; };
 		66AF7EF61E40D87C00F46B61 /* XEJLockedObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLockedObjectView.m; sourceTree = "<group>"; };
 		66AF7EF81E40D8A100F46B61 /* XEJLockedObjectViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLockedObjectViewModel.h; sourceTree = "<group>"; };
 		66AF7EF91E40D8A100F46B61 /* XEJLockedObjectViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLockedObjectViewModel.m; sourceTree = "<group>"; };
+		66FB65681E4B21B70010167F /* XEJRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRevealViewController.h; sourceTree = "<group>"; };
+		66FB65691E4B21B70010167F /* XEJRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJRevealViewController.m; sourceTree = "<group>"; };
+		66FB656B1E4B22140010167F /* XEJRevealViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRevealViewModel.h; sourceTree = "<group>"; };
+		66FB656C1E4B22140010167F /* XEJRevealViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJRevealViewModel.m; sourceTree = "<group>"; };
+		66FB656E1E4B236F0010167F /* XEJRearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRearViewController.h; sourceTree = "<group>"; };
+		66FB656F1E4B236F0010167F /* XEJRearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJRearViewController.m; sourceTree = "<group>"; };
+		66FB65711E4B23890010167F /* XEJRearViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRearViewModel.h; sourceTree = "<group>"; };
+		66FB65721E4B23890010167F /* XEJRearViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJRearViewModel.m; sourceTree = "<group>"; };
 		66FEE3021E38AC0B00C25FBB /* XEJThreadContentTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentTextView.h; sourceTree = "<group>"; };
 		66FEE3031E38AC0B00C25FBB /* XEJThreadContentTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadContentTextView.m; sourceTree = "<group>"; };
 		66FEE3051E38AC1F00C25FBB /* XEJThreadContentImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJThreadContentImageView.h; sourceTree = "<group>"; };
@@ -214,10 +235,10 @@
 		66FEE31B1E39DE1600C25FBB /* XEJUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJUtility.m; sourceTree = "<group>"; };
 		66FEE31D1E39E0D000C25FBB /* XEJDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJDateFormatter.h; sourceTree = "<group>"; };
 		66FEE31E1E39E0D000C25FBB /* XEJDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJDateFormatter.m; sourceTree = "<group>"; };
-		6AEE8E71AFB9903BBAA91421 /* libPods-HiPDATests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDATests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8D54408F55CF14EB9AFFBC /* Pods-HiPDATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDATests/Pods-HiPDATests.release.xcconfig"; sourceTree = "<group>"; };
 		94959929C401BDBC99FDB068 /* Pods-HiPDAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDAUITests/Pods-HiPDAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9B8EB5CFEF3BF6BCDA947715 /* Pods-HiPDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPDA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiPDA/Pods-HiPDA.debug.xcconfig"; sourceTree = "<group>"; };
+		D101BB9DC14015E7E549878F /* libPods-HiPDATests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiPDATests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C1CB135FFCB84CD839E73D /* libPods-HiPDA.a in Frameworks */,
+				020EE6E602A71AEDD49F2720 /* libPods-HiPDA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC0FC8654F480580BF7327F /* libPods-HiPDATests.a in Frameworks */,
+				F00A82E78269D615EE8F1F47 /* libPods-HiPDATests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				445787FAEEF2D09DAD0A69FF /* libPods-HiPDAUITests.a in Frameworks */,
+				92594CDF7846BDFFEB8F1960 /* libPods-HiPDAUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +393,12 @@
 				66FEE30F1E38B0A800C25FBB /* XEJThreadContentImageViewModel.m */,
 				66FEE3111E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.h */,
 				66FEE3121E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m */,
+				66A8E02D1E49C944000BE2C5 /* XEJLoginViewModel.h */,
+				66A8E02E1E49C944000BE2C5 /* XEJLoginViewModel.m */,
+				66FB656B1E4B22140010167F /* XEJRevealViewModel.h */,
+				66FB656C1E4B22140010167F /* XEJRevealViewModel.m */,
+				66FB65711E4B23890010167F /* XEJRearViewModel.h */,
+				66FB65721E4B23890010167F /* XEJRearViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +445,12 @@
 				6668EA681E2B9B9700B6AF41 /* XEJThreadListViewController.m */,
 				66A6AD511E34A3D40019D536 /* XEJThreadViewController.h */,
 				66A6AD521E34A3D40019D536 /* XEJThreadViewController.m */,
+				66A8E0111E49864F000BE2C5 /* XEJLoginViewController.h */,
+				66A8E0121E49864F000BE2C5 /* XEJLoginViewController.m */,
+				66FB65681E4B21B70010167F /* XEJRevealViewController.h */,
+				66FB65691E4B21B70010167F /* XEJRevealViewController.m */,
+				66FB656E1E4B236F0010167F /* XEJRearViewController.h */,
+				66FB656F1E4B236F0010167F /* XEJRearViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -510,6 +543,8 @@
 				66A8E0061E4880C3000BE2C5 /* XEJNavigationControllerStackManager.m */,
 				6668EA7F1E2BB72E00B6AF41 /* XEJNetworkManager.h */,
 				6668EA801E2BB72E00B6AF41 /* XEJNetworkManager.m */,
+				66A8E0301E49D31F000BE2C5 /* XEJAccountManager.h */,
+				66A8E0311E49D31F000BE2C5 /* XEJAccountManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -517,9 +552,9 @@
 		7E37E263595E65148D2435CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3ABCF2BFDA61507CBA1952EE /* libPods-HiPDA.a */,
-				6AEE8E71AFB9903BBAA91421 /* libPods-HiPDATests.a */,
-				4CD915094196749861FDC81C /* libPods-HiPDAUITests.a */,
+				4C1CD2084DF3EA108206BD86 /* libPods-HiPDA.a */,
+				D101BB9DC14015E7E549878F /* libPods-HiPDATests.a */,
+				0337D4DF42A24E6BE01423A4 /* libPods-HiPDAUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -821,6 +856,7 @@
 				66A6AD591E34A4290019D536 /* XEJThreadCell.m in Sources */,
 				66A8DFF91E45B82B000BE2C5 /* XEJReply.m in Sources */,
 				66A6AD681E3606480019D536 /* XEJForum.m in Sources */,
+				66FB65701E4B236F0010167F /* XEJRearViewController.m in Sources */,
 				66A8DFDF1E446ECC000BE2C5 /* XEJPostStatusObjectView.m in Sources */,
 				664056C61DF952C1002FC462 /* ViewController.m in Sources */,
 				6668EA791E2BA52600B6AF41 /* XEJThreadListCell.m in Sources */,
@@ -834,6 +870,7 @@
 				66A8DFE21E446EF2000BE2C5 /* XEJPollObjectViewModel.m in Sources */,
 				66A8DFE51E446EFF000BE2C5 /* XEJPostStatusObjectViewModel.m in Sources */,
 				66FEE3071E38AC1F00C25FBB /* XEJThreadContentImageView.m in Sources */,
+				66FB656D1E4B22140010167F /* XEJRevealViewModel.m in Sources */,
 				6668EA691E2B9B9700B6AF41 /* XEJThreadListViewController.m in Sources */,
 				66A8DFF61E45B3E8000BE2C5 /* XEJReplyObjectViewModel.m in Sources */,
 				6668EA7C1E2BA72900B6AF41 /* XEJThreadListCellViewModel.m in Sources */,
@@ -842,6 +879,7 @@
 				664057011DF97053002FC462 /* XEJModel.m in Sources */,
 				66FEE30D1E38B08F00C25FBB /* XEJThreadContentTextViewModel.m in Sources */,
 				664057091DF974B1002FC462 /* XEJView.m in Sources */,
+				66FB656A1E4B21B70010167F /* XEJRevealViewController.m in Sources */,
 				66A6AD561E34A3FB0019D536 /* XEJThreadViewModel.m in Sources */,
 				66AF7EFA1E40D8A100F46B61 /* XEJLockedObjectViewModel.m in Sources */,
 				664057051DF970D2002FC462 /* XEJViewModel.m in Sources */,
@@ -851,10 +889,12 @@
 				66A8DFE91E4486E1000BE2C5 /* XEJPostStatus.m in Sources */,
 				66A6AD4D1E345CC10019D536 /* XEJAvatarView.m in Sources */,
 				66FEE3131E38B0D200C25FBB /* XEJThreadContentAttachmentViewModel.m in Sources */,
+				66A8E02F1E49C944000BE2C5 /* XEJLoginViewModel.m in Sources */,
 				66A6AD501E345CF00019D536 /* XEJAvatarViewModel.m in Sources */,
 				664056C31DF952C1002FC462 /* AppDelegate.m in Sources */,
 				66FEE30A1E38AC3000C25FBB /* XEJThreadContentAttachmentView.m in Sources */,
 				66A6AD6B1E3606CE0019D536 /* XEJThread.m in Sources */,
+				66A8E0321E49D31F000BE2C5 /* XEJAccountManager.m in Sources */,
 				6668EA721E2BA1F800B6AF41 /* XEJTableView.m in Sources */,
 				66A8DFF31E45B181000BE2C5 /* XEJReplyObjectView.m in Sources */,
 				669DFC141E42E20E0000D3FD /* XEJObjectViewModel.m in Sources */,
@@ -866,9 +906,11 @@
 				6668EA6F1E2B9C0000B6AF41 /* XEJThreadListViewModel.m in Sources */,
 				66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */,
 				66AF7EF71E40D87C00F46B61 /* XEJLockedObjectView.m in Sources */,
+				66A8E0131E49864F000BE2C5 /* XEJLoginViewController.m in Sources */,
 				66A6AD5C1E34A8570019D536 /* XEJThreadView.m in Sources */,
 				664056C01DF952C1002FC462 /* main.m in Sources */,
 				66A8E00A1E48823B000BE2C5 /* XEJNavigationController.m in Sources */,
+				66FB65731E4B23890010167F /* XEJRearViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

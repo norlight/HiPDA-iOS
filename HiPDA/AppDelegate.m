@@ -10,6 +10,8 @@
 #import "XEJThreadViewModel.h"
 #import "XEJThreadListViewModel.h"
 #import "XEJNavigationControllerStackManager.h"
+#import "XEJLoginViewController.h"
+#import "XEJUtility.h"
 
 @interface AppDelegate ()
 
@@ -23,30 +25,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    //XEJThreadListViewModel *viewModel = [XEJThreadListViewModel new];
+    //[[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
     
-    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadListViewController new]];
-    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[XEJThreadViewController new]];
-    XEJThreadListViewModel *viewModel = [XEJThreadListViewModel new];
-    [[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
+    
+    XEJLoginViewController *vc = [XEJLoginViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
 
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     return YES;
 }

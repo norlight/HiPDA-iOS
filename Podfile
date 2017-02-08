@@ -20,6 +20,7 @@ target 'HiPDA' do
   pod 'RETableViewManager', '~> 1.7'
   #pod 'HYBUnicodeReadable', '~> 1.3'
   pod 'RegexKitLite-NoWarning', '~> 1.1.0'
+  pod 'SWRevealViewController', '~> 2.3.0'
   pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
   
   

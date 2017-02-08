@@ -79,7 +79,7 @@
                            }
                                 error:nil];
     
-    [XEJViewModel aspect_hookSelector:@selector(popViewControllerAnimated:)
+    [XEJViewModel aspect_hookSelector:@selector(popViewModelAnimated:)
                           withOptions:AspectPositionAfter
                            usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
                                @strongify(self);
@@ -147,7 +147,7 @@
 - (XEJViewController *)viewControllerForViewModel:(XEJViewModel *)viewModel
 {
     NSString *controllerName = [viewModel controllerName];
-    NSParameterAssert([NSClassFromString(controllerName) isSubclassOfClass:[XEJViewController class]]);
+    //NSParameterAssert([NSClassFromString(controllerName) isSubclassOfClass:[XEJViewController class]]);
     NSParameterAssert([NSClassFromString(controllerName) instancesRespondToSelector:@selector(initWithViewModel:)]);
     XEJViewController *viewController = [[NSClassFromString(controllerName) alloc] initWithViewModel:viewModel];
     return viewController;

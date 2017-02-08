@@ -67,6 +67,7 @@ PODS:
     - REValidation (~> 0.1.4)
   - REValidation (0.1.4)
   - SAMKeychain (1.5.2)
+  - SWRevealViewController (2.3.0)
   - UITableView+FDTemplateLayoutCell (1.5.beta)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -86,6 +87,7 @@ DEPENDENCIES:
   - RegexKitLite-NoWarning (~> 1.1.0)
   - RETableViewManager (~> 1.7)
   - SAMKeychain (~> 1.5.2)
+  - SWRevealViewController (~> 2.3.0)
   - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
   - YYKit (~> 1.0.9)
 
@@ -106,9 +108,10 @@ SPEC CHECKSUMS:
   RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: a219db4ccffaf56d9e4a0e3d1202247f2600bde9
+PODFILE CHECKSUM: 2617205efd96cf2ddd494716b9744964be461bc4
 
 COCOAPODS: 1.1.1
