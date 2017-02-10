@@ -48,8 +48,11 @@ PODS:
   - DTFoundation/UIKit (1.7.11):
     - DTFoundation/Core
   - HTMLKit (1.1.0)
+  - JDStatusBarNotification (1.5.4)
   - Kiwi (2.4.0)
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
   - Ono (1.2.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -79,8 +82,11 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - DTCoreText (~> 1.6.19)
   - HTMLKit (~> 1.1.0)
+  - JDStatusBarNotification (= 1.5.4)
   - Kiwi (= 2.4.0)
   - Masonry (~> 1.0.2)
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
   - Ono (~> 1.2.2)
   - ReactiveCocoa (~> 2.5)
   - ReactiveViewModel (~> 0.3)
@@ -98,8 +104,11 @@ SPEC CHECKSUMS:
   DTCoreText: 184cc2f460c2177108e8700dfb0eb1b1cb72c99d
   DTFoundation: 0ef29c70a9814e15518694862bd739347abe2a50
   HTMLKit: dd229aef14bb879424df83a618e9c9cc26b45dbe
+  JDStatusBarNotification: d47dded0594a50a39c84a2cc5aa356fcf6750d0e
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
@@ -112,6 +121,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 2617205efd96cf2ddd494716b9744964be461bc4
+PODFILE CHECKSUM: 40a3731dc74fee99446ac20b302a2d50c2ef1b0f
 
 COCOAPODS: 1.1.1

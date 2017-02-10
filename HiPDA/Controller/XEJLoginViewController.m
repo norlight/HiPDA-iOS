@@ -8,7 +8,9 @@
 
 #import "XEJLoginViewController.h"
 #import <YYKit/YYKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #import <RETableViewManager/RETableViewManager.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
 #import <RETableViewManager/RETableViewOptionsController.h>
 
 @interface XEJLoginViewController () <RETableViewManagerDelegate>
@@ -226,8 +228,25 @@
     
     [[viewModel.loginCommand.executing skip:1] subscribeNext:^(NSNumber *executing) {
         @strongify(self);
+        if (executing.boolValue) {
+            [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+            
+        } else {
+            [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        }
         self.loginItem.title = executing.boolValue ? @"正在登录..." : @"登录";
         [self.loginItem reloadRowWithAnimation:UITableViewRowAnimationAutomatic];
+    }];
+    [[viewModel.loginCommand.executionSignals switchToLatest] subscribeNext:^(NSNumber *success) {
+        if (success.boolValue) {
+            [JDStatusBarNotification showWithStatus:@"登录成功" dismissAfter:2 styleName:@"JDStatusBarStyleSuccess"];
+        } else {
+            [JDStatusBarNotification showWithStatus:@"登录失败" dismissAfter:2 styleName:@"JDStatusBarStyleError"];
+        }
+        
+    }];
+    [viewModel.loginCommand.errors subscribeNext:^(id x) {
+        [JDStatusBarNotification showWithStatus:@"登录出错" dismissAfter:2 styleName:@"JDStatusBarStyleError"];
     }];
     
     self.loginItem.selectionHandler = ^(RETableViewItem *item) {

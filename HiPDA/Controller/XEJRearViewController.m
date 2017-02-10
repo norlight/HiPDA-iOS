@@ -10,9 +10,10 @@
 #import "XEJThreadListViewController.h"
 #import "XEJNavigationController.h"
 #import "XEJLoginViewModel.h"
+#import <YYKit/YYKit.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import <SWRevealViewController/SWRevealViewController.h>
-#import <YYKit/YYKit.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
 
 @interface XEJRearViewController () <RETableViewManagerDelegate>
 
@@ -146,6 +147,15 @@
         @strongify(self);
         self.loggingItem.title = isLogin.boolValue ? @"退出" : @"登录";
         [self.loggingItem reloadRowWithAnimation:UITableViewRowAnimationAutomatic];
+    }];
+    
+    [[viewModel.logoutCommand.executionSignals switchToLatest] subscribeNext:^(NSNumber *success) {
+        if (success.boolValue) {
+            [JDStatusBarNotification showWithStatus:@"退出成功" dismissAfter:2 styleName:@"JDStatusBarStyleSuccess"];
+        } else {
+            [JDStatusBarNotification showWithStatus:@"退出失败" dismissAfter:2 styleName:@"JDStatusBarStyleError"];
+        }
+        
     }];
     
 }

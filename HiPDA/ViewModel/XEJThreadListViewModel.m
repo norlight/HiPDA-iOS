@@ -65,6 +65,17 @@
         NSLog(@"错误：%@", error);
     }];
     
+    [[self.nextPageCommand.executionSignals switchToLatest] subscribeNext:^(NSArray<XEJThreadListCellViewModel *> *viewModels) {
+        NSMutableArray *array = [NSMutableArray arrayWithArray:self.dataArray];
+        [array addObjectsFromArray:viewModels];
+        self.dataArray = array;
+        
+        [self.updateUI sendNext:self];
+    }];
+    [self.nextPageCommand.errors subscribeNext:^(NSError *error) {
+        NSLog(@"错误：%@", error);
+    }];
+    
 }
 
 
@@ -97,8 +108,8 @@
 {
 
     //NSString *fid = @"59";
-    NSNumber *page = @(1);
-    NSString *path = [NSString stringWithFormat:XEJForumPath, _fid, page];
+    //NSNumber *page = @(1);
+    NSString *path = [NSString stringWithFormat:XEJForumPath, _fid, @(_currentPage)];
     //NSLog(@"%@", _fid);
     return [[[[[[XEJNetworkManager sharedManager] GET:path parameters:nil]
                
@@ -108,7 +119,13 @@
                        NSError *error = nil;
                        ONOXMLDocument *document = [ONOXMLDocument HTMLDocumentWithData:response error:&error];
                        //NSLog(@"%@", document.description);
-                       error ? [subscriber sendError:error] : [subscriber sendNext:document];
+                       //error ? [subscriber sendError:error] : [subscriber sendNext:document];
+                       if (error) {
+                           [subscriber sendError:error];
+                       }
+                       
+                       [subscriber sendNext:document];
+                       [subscriber sendCompleted];
                        return nil;
                    }];
                }]

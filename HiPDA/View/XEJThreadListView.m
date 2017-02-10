@@ -11,6 +11,9 @@
 #import "XEJThreadListCell.h"
 #import "XEJTableView.h"
 #import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface XEJThreadListView () <UITableViewDataSource, UITableViewDelegate>
@@ -51,8 +54,52 @@
 - (void)bindViewModel:(XEJThreadListViewModel *)viewModel
 {
     self.viewModel = viewModel;
+    @weakify(self);
     [self.viewModel.updateUI subscribeNext:^(id x) {
         [self.mainTableView reloadData];
+    }];
+    
+    self.mainTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.viewModel.fetchDataCommand execute:nil];
+    }];
+    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.viewModel.nextPageCommand execute:nil];
+    }];
+    self.mainTableView.mj_footer.hidden = YES;
+    
+    [[self.viewModel.fetchDataCommand.executing skip:1] subscribeNext:^(NSNumber *executing) {
+        self.mainTableView.mj_footer.hidden = executing.boolValue;
+        
+        if (executing.boolValue) {
+            [MBProgressHUD showHUDAddedTo:self animated:YES];
+            
+        } else {
+            [MBProgressHUD hideHUDForView:self animated:YES];
+            [self.mainTableView.mj_header endRefreshing];
+            [self.mainTableView.mj_footer endRefreshing];
+            
+            [JDStatusBarNotification showWithStatus:@"刷新成功" dismissAfter:2 styleName:@"JDStatusBarStyleSuccess"];
+        }
+    }];
+    
+    [[self.viewModel.nextPageCommand.executing skip:1] subscribeNext:^(NSNumber *executing) {
+        if (executing.boolValue) {
+            [MBProgressHUD showHUDAddedTo:self animated:YES];
+            
+        } else {
+            [MBProgressHUD hideHUDForView:self animated:YES];
+            [self.mainTableView.mj_header endRefreshing];
+            [self.mainTableView.mj_footer endRefreshing];
+        }
+    }];
+
+    [[self.viewModel.fetchDataCommand.errors merge:self.viewModel.nextPageCommand.errors] subscribeNext:^(id x) {
+        [self.mainTableView.mj_header endRefreshing];
+        [self.mainTableView.mj_footer endRefreshing];
+        [JDStatusBarNotification showWithStatus:@"刷新失败" dismissAfter:2 styleName:@"JDStatusBarStyleError"];
+
     }];
     
     [self.viewModel.fetchDataCommand execute:nil];
