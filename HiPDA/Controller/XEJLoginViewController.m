@@ -7,7 +7,6 @@
 //
 
 #import "XEJLoginViewController.h"
-
 #import <YYKit/YYKit.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import <RETableViewManager/RETableViewOptionsController.h>
@@ -15,7 +14,7 @@
 @interface XEJLoginViewController () <RETableViewManagerDelegate>
 
 @property (nonatomic, strong) RETableViewManager *manager;
-@property (nonatomic, strong) RETableViewSection *basicControlsSecion;
+@property (nonatomic, strong) RETableViewSection *basicControlsSection;
 @property (nonatomic, strong) RETableViewSection *buttonSection;
 
 @property (nonatomic, strong) RETextItem *usernameItem;
@@ -51,6 +50,12 @@
     
     [self setupViews];
     [self bindViewModel:self.viewModel];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setupNavigation];
 }
 
 
@@ -113,7 +118,7 @@
     
     
     //用户名、密码、安全问题部分
-    self.basicControlsSecion = ({
+    self.basicControlsSection = ({
         RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@" "];
         
         self.usernameItem = ({
@@ -135,10 +140,7 @@
             @strongify(self);
             RERadioItem *item = [RERadioItem itemWithTitle:@"安全提问" value:@"无" selectionHandler:^(RERadioItem *item) {
                 //
-                [item deselectRowAnimated:YES]; // same as [weakSelf.tableView deselectRowAtIndexPath:item.indexPath animated:YES];
-                
-                // Generate sample options
-                //
+                [item deselectRowAnimated:YES];
                 NSArray *questions = @[@"无",
                                        @"母亲的名字",
                                        @"爷爷的名字",
@@ -148,16 +150,14 @@
                                        @"您最喜欢的餐馆名称",
                                        @"驾驶执照后四位数字"];
                 
-                // Present options controller
-                //
+
                 RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:questions multipleChoice:NO completionHandler:^(RETableViewItem *selectedItem){
                     [self.navigationController popViewControllerAnimated:YES];
                     
-                    [item reloadRowWithAnimation:UITableViewRowAnimationNone]; // same as [weakSelf.tableView reloadRowsAtIndexPaths:@[item.indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                    [item reloadRowWithAnimation:UITableViewRowAnimationNone];
                 }];
                 
-                // Adjust styles
-                //
+              
                 optionsController.delegate = self;
                 optionsController.style = section.style;
                 if (self.tableView.backgroundView == nil) {
@@ -165,8 +165,7 @@
                     optionsController.tableView.backgroundView = nil;
                 }
                 
-                // Push the options controller
-                //
+
                 [self.navigationController pushViewController:optionsController animated:YES];
             }];
             
@@ -208,7 +207,19 @@
     @weakify(self);
     RAC(viewModel, username) = RACObserve(self.usernameItem, value);
     RAC(viewModel, password) = RACObserve(self.passwordItem, value);
-    RAC(viewModel, questionId) = [RACObserve(self.questionItem, value) ignore:@"无"];
+    RAC(viewModel, questionId) = [[RACObserve(self.questionItem, value) ignore:@"无"] map:^NSString *(NSString *question){
+        NSDictionary *mapping = @{
+                                  @"母亲的名字" : @"1",
+                                  @"爷爷的名字" : @"2",
+                                  @"父亲出生的城市" : @"3",
+                                  @"您其中一位老师的名字" : @"4",
+                                  @"您个人计算机的型号" : @"5",
+                                  @"您最喜欢的餐馆名称" : @"6",
+                                  @"驾驶执照后四位数字" : @"7"
+            
+        };
+        return mapping[question];
+    }];
     RAC(viewModel, answer) = RACObserve(self.answerItem, value);
     
     //RAC(self.loginItem, enabled) = [viewModel.loginCommand.enabled startWith:@(NO)];
@@ -220,9 +231,15 @@
     }];
     
     self.loginItem.selectionHandler = ^(RETableViewItem *item) {
-        NSLog(@"clicked");
         [viewModel.loginCommand execute:nil];
     };
+}
+
+
+- (void)setupNavigation
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.dismissCommand;
 }
 
 

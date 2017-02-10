@@ -46,9 +46,18 @@
         NSString *urlString = [NSString stringWithFormat:@"%@%@%@", XEJBaseUrl, XEJLoggingPath, queryString];
         _formhash = [[[[XEJNetworkManager sharedManager] GET:urlString parameters:nil]
                       map:^NSString *(RACTuple *tuple) {
+                          /*
                           ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:tuple.second error:nil];
                           ONOXMLElement *formhashElement = [doc firstChildWithXPath:@"//form[@id='loginform']/input[@name='formhash']"];
                           return formhashElement[@"value"];
+                           */
+                          //登录状态不同formhash的位置不一样，改为正则来扫
+                          NSString *resStr = [[NSString alloc] initWithData:tuple.second encoding:XEJEncodingGBK];
+                          NSString *formhashRegex = @"(?<=formhash=)\\w+";
+                          if (!formhashRegex) {
+                              NSLog(@"未能取得formhash");
+                          }
+                          return [resStr stringByMatching:formhashRegex];
                       }]
                      replayLazily]; //转成热信号，避免副作用
     }
@@ -66,25 +75,22 @@
 #pragma mark - Request
 - (RACSignal *)signInWithUsername:(NSString *)username password:(NSString *)password questionId:(NSString *)questionId answer:(NSString *)answer
 {
-    return _formhash;
-    
-    
-    return [RACSignal empty];
-    
     NSParameterAssert(username);
     NSParameterAssert(password);
     
-    [[[self.formhash flattenMap:^RACStream *(NSString *formhash) {
+    return [[[self.formhash flattenMap:^RACStream *(NSString *formhash) {
         NSDictionary* bodyParameters = @{
                                          @"loginfield" : @"username",
                                          @"cookietime" : @"2592000",
                                          @"formhash" : formhash,
-                                         @"username" : username.md5String,
-                                         @"password" : password,
+                                         @"username" : username,
+                                         @"password" : password.md5String,
                                          @"questionid" : questionId ?: @"",
-                                         @"answer" : answer ?: @""
-                                         //@"referer" : @"https://www.hi-pda.com/forum/",
+                                         @"answer" : answer ?: @"",
+                                         @"referer" : @"https://www.hi-pda.com/forum/"
                                          };
+        
+        //NSLog(@"%@", bodyParameters);
         
         
         NSString *queryString = @"?action=login&loginsubmit=yes";
@@ -97,7 +103,7 @@
       }]
      map:^id(NSData *response) {
          NSString *resString = [[NSString alloc] initWithData:response encoding:XEJEncodingGBK];
-         NSLog(@"response:%@", resString);
+         //NSLog(@"response:%@", resString);
          return @([resString isMatchedByRegex:@"欢迎您回来"]);
      }];
     
@@ -149,6 +155,7 @@
         [query fetchAll:&error];
         //没找到帐号返回error，并不是返回空数组
         if (error) {
+            //NSLog(@"钥匙串内登录信息查找失败：%@", error);
             [subscriber sendError:error];
         }
         

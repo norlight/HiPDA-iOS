@@ -81,6 +81,7 @@
                                                    [subscriber sendNext:tuple];
                                                    [subscriber sendCompleted];
                                                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                                   //离线等操作会直接产生错误，直接转发的话在别处被接收处理不当的话会崩溃，待进一步判断处理
                                                    [subscriber sendError:error];
                                                }];
         

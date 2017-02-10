@@ -7,7 +7,12 @@
 //
 
 #import "XEJViewController.h"
+#import "XEJThreadListViewModel.h"
 
 @interface XEJThreadListViewController : XEJViewController
+
+@property (nonatomic, strong) XEJThreadListViewModel *viewModel;
+
+- (instancetype)initWithViewModel:(XEJThreadListViewModel *)viewModel;
 
 @end

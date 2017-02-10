@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 #import "XEJThreadViewModel.h"
 #import "XEJThreadListViewModel.h"
+#import "XEJThreadListViewController.h"
 #import "XEJNavigationControllerStackManager.h"
 #import "XEJLoginViewController.h"
+#import "XEJRevealViewController.h"
+#import "XEJAccountManager.h"
 #import "XEJUtility.h"
 
 @interface AppDelegate ()
@@ -25,14 +28,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[UINavigationBar appearance] setTintColor:XEJMainColor];
+    
+    //不要轻易直接订阅，两个信号会绑成一个，任何error和complete都会导致原先两个都终止
+    //[[[XEJAccountManager sharedManager] autoLogin] subscribe:[XEJAccountManager sharedManager].isLogin];
+    [[[XEJAccountManager sharedManager] autoLogin] subscribeNext:^(id x) {
+        [[XEJAccountManager sharedManager].isLogin sendNext:x];
+    } error:^(NSError *error) {
+        //
+    }];
 
     //XEJThreadListViewModel *viewModel = [XEJThreadListViewModel new];
-    //[[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
+    XEJRevealViewModel *viewModel = [XEJRevealViewModel new];
+    [[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
     
     
-    XEJLoginViewController *vc = [XEJLoginViewController new];
+    //XEJLoginViewController *vc = [XEJLoginViewController new];
+    //XEJThreadListViewController *vc = [XEJThreadListViewController new];
+    XEJRevealViewController *vc = [XEJRevealViewController new];
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    self.window.rootViewController = nav;
+    //self.window.rootViewController = nav;
 
     
     

@@ -7,7 +7,13 @@
 //
 
 #import "XEJViewModel.h"
+#import "XEJForum.h"
 
 @interface XEJRearViewModel : XEJViewModel
+
+@property (nonatomic, copy) NSArray<XEJForum *> *forums;
+@property (nonatomic, copy) NSDictionary<NSString *, UIImage *> *icons;
+@property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, strong) RACCommand *logoutCommand;
 
 @end

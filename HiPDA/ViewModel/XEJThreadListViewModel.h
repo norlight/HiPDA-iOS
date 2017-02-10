@@ -7,12 +7,15 @@
 //
 
 #import "XEJViewModel.h"
+#import "XEJForum.h"
 #import "XEJThreadListCellViewModel.h"
 
 @interface XEJThreadListViewModel : XEJViewModel
 
 @property (nonatomic, copy) NSString *fid;
-@property (nonatomic, copy) NSString *formhash;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) BOOL private;
+//@property (nonatomic, copy) NSString *formhash;
 
 @property (nonatomic, copy) NSArray<XEJThreadListCellViewModel *> *dataArray;
 
@@ -22,6 +25,9 @@
 @property (nonatomic, strong) RACSubject *updateUI;
 @property (nonatomic, strong) RACSubject *refreshEndSubject;
 @property (nonatomic, strong) RACSubject *cellSelectedSubject;
+
+@property (nonatomic, strong) XEJForum *model;
+- (instancetype)initWithModel:(XEJForum *)model;
 
 @end
 

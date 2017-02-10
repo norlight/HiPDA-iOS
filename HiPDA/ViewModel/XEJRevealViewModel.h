@@ -7,10 +7,11 @@
 //
 
 #import "XEJViewModel.h"
+#import "XEJRearViewModel.h"
 
 @interface XEJRevealViewModel : XEJViewModel
 
-@property (nonatomic, strong) XEJViewModel *rearViewModel;
+@property (nonatomic, strong) XEJRearViewModel *rearViewModel;
 @property (nonatomic, strong) XEJViewModel *frontViewModel;
 
 @end

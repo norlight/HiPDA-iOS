@@ -16,5 +16,6 @@
 @property (nonatomic, copy) NSString *questionId;
 @property (nonatomic, copy) NSString *answer;
 @property (nonatomic, strong) RACCommand *loginCommand;
+@property (nonatomic, strong) RACCommand *dismissCommand;
 
 @end

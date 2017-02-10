@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "XEJNavigationController.h"
 #import "XEJViewController.h"
+#import "XEJRevealViewController.h"
 #import <AspectsV1.4.2/Aspects.h>
 
 @interface XEJNavigationControllerStackManager ()
@@ -73,7 +74,7 @@
                           withOptions:AspectPositionAfter
                            usingBlock:^(id<AspectInfo> aspectInfo, XEJViewModel *viewModel, BOOL animated) {
                                @strongify(self);
-                               XEJViewController *vc = [self viewControllerForViewModel:viewModel];
+                               UIViewController *vc = [self viewControllerForViewModel:viewModel];
                                [self.navigationControllers.lastObject pushViewController:vc animated:animated];
                                
                            }
@@ -128,12 +129,35 @@
                            }
                                 error:nil];
     
+    //每次切换front都将旧Nav弹出基础栈，新的压入
+    [XEJRevealViewController aspect_hookSelector:@selector(pushFrontViewController:animated:)
+                                     withOptions:AspectPositionBefore
+                                      usingBlock:^(id<AspectInfo> aspectInfo, UIViewController *frontViewController, BOOL animated){
+                                          NSAssert([frontViewController isKindOfClass:[UINavigationController class]], @"front需是Nav");
+                                          [self popNavigationController];
+                                          [self pushNavigationController:(UINavigationController *)frontViewController];
+                                          
+                                      }
+                                           error:nil];
+    
 }
 
 - (void)resetRootViewModel:(XEJViewModel *)viewModel
 {
-    XEJViewController *vc = [self viewControllerForViewModel:viewModel];
     [self.navigationControllers removeAllObjects];
+    UIViewController *vc = [self viewControllerForViewModel:viewModel];
+    
+    //将RevealVc做为RootVc时需要特殊处理
+    //倘若当成普通Vc处理在RevealVc外层包Nav做为vm route vm的基础，则front的title会被遮挡
+    //所以选择包裹front，将其Nav压入基础栈
+    if ([vc isMemberOfClass:[XEJRevealViewController class]]) {
+        XEJRevealViewController *revealVc = (XEJRevealViewController *)vc;
+        NSAssert([revealVc.frontViewController isKindOfClass:[UINavigationController class]], @"RevealVc做为RootVc时需保证其frontVc为Nav！");
+        [self pushNavigationController:(UINavigationController *)revealVc.frontViewController];
+        XEJAppDelegate.window.rootViewController = revealVc;
+        return;
+    }
+    
     XEJNavigationController *nav;
     if (![vc isKindOfClass:[UINavigationController class]] &&
         ![vc isKindOfClass:[UITabBarController class]]) {
@@ -144,12 +168,12 @@
     XEJAppDelegate.window.rootViewController = nav;
 }
 
-- (XEJViewController *)viewControllerForViewModel:(XEJViewModel *)viewModel
+- (UIViewController *)viewControllerForViewModel:(XEJViewModel *)viewModel
 {
     NSString *controllerName = [viewModel controllerName];
     //NSParameterAssert([NSClassFromString(controllerName) isSubclassOfClass:[XEJViewController class]]);
     NSParameterAssert([NSClassFromString(controllerName) instancesRespondToSelector:@selector(initWithViewModel:)]);
-    XEJViewController *viewController = [[NSClassFromString(controllerName) alloc] initWithViewModel:viewModel];
+    UIViewController *viewController = [[NSClassFromString(controllerName) alloc] initWithViewModel:viewModel];
     return viewController;
 }
 

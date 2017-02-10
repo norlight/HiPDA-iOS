@@ -13,6 +13,10 @@
 
 - (void)xej_initialize
 {
+    self.dismissCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self dismissViewModelAnimated:YES completion:nil];
+        return [RACSignal empty];
+    }];
     
     RACSignal *usernameValid = [RACSignal return:@(self.username.length)];
     RACSignal *passwordValid = [RACSignal return:@(self.password.length)];
@@ -24,7 +28,7 @@
     
     self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         RACSignal *signInSuccess = [[XEJAccountManager sharedManager] signInWithUsername:_username
-                                                                                password:_username
+                                                                                password:_password
                                                                               questionId:_questionId
                                                                                   answer:_answer];
         RACSignal *storeInfo = [[[XEJAccountManager sharedManager] storeAccountWithUsername:_username
@@ -36,17 +40,18 @@
         return [RACSignal if:signInSuccess then: storeInfo else:[RACSignal return:@(false)]];
     }];
     
-    [[self.loginCommand.executionSignals switchToLatest] subscribeNext:^(id x) {
-        NSLog(@"%@", x);
-        /*
+    [[self.loginCommand.executionSignals switchToLatest] subscribeNext:^(NSNumber *success) {
+        NSLog(@"是否登录成功：%@", success);
+        
+        
         if (success.boolValue) {
             [[XEJAccountManager sharedManager].isLogin sendNext:@(YES)];
-            //pop to normal viewModel
+            [self.dismissCommand execute:nil];
         } else {
             [[XEJAccountManager sharedManager].isLogin sendNext:@(NO)];
             //show notify
         }
-         */
+        
     }];
     
     [self.loginCommand.errors subscribeNext:^(NSError *error) {

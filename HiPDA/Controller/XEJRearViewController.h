@@ -6,8 +6,14 @@
 //  Copyright © 2017年 norlight. All rights reserved.
 //
 
-#import "XEJViewController.h"
+#import <UIKit/UIKit.h>
+#import "XEJViewControllerProtocol.h"
+#import "XEJRearViewModel.h"
 
-@interface XEJRearViewController : XEJViewController
+@interface XEJRearViewController : UITableViewController <XEJViewControllerProtocol>
+
+@property (nonatomic, strong) XEJRearViewModel *viewModel;
+
+- (instancetype) initWithViewModel:(XEJRearViewModel *)viewModel;
 
 @end

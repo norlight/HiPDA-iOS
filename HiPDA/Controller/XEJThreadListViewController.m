@@ -7,22 +7,38 @@
 //
 
 #import "XEJThreadListViewController.h"
-#import "XEJThreadListViewModel.h"
 #import "XEJThreadListView.h"
+#import "XEJRevealViewController.h"
 #import <Masonry/Masonry.h>
+#import <YYKit/YYKit.h>
 
 @interface XEJThreadListViewController ()
 
-@property (nonatomic, strong) XEJThreadListViewModel *viewModel;
+
 @property (nonatomic, strong) XEJThreadListView *mainView;
 
 @end
 
 @implementation XEJThreadListViewController
 
+- (instancetype)init
+{
+    return [self initWithViewModel:[XEJThreadListViewModel new]];
+}
+
+- (instancetype)initWithViewModel:(XEJThreadListViewModel *)viewModel
+{
+    self = [super initWithViewModel:viewModel];
+    if (self) {
+        _viewModel = viewModel;
+    }
+    
+    return self;
+}
+
 - (void)setupViews
 {
-    self.viewModel = [XEJThreadListViewModel new];
+    //self.viewModel = [XEJThreadListViewModel new];
     self.mainView = ({
         XEJThreadListView *view = [[XEJThreadListView alloc] initWithViewModel:self.viewModel];
         
@@ -34,7 +50,18 @@
 
 - (void)setupNavigation
 {
-    self.title = @"Discovery";
+    self.title = self.viewModel.title;
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    
+    UIImage *icon = [[UIImage imageNamed:@"icon_reveal"]
+                      imageByResizeToSize:CGSizeMake(20, 20) contentMode:UIViewContentModeScaleAspectFit]
+                     ;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:icon style:UIBarButtonItemStylePlain handler:^(id sender) {
+        [revealController revealToggle:sender];
+    }];
 }
 
 - (void)updateViewConstraints

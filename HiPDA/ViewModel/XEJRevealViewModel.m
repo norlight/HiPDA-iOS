@@ -7,7 +7,6 @@
 //
 
 #import "XEJRevealViewModel.h"
-#import "XEJRearViewModel.h"
 #import "XEJThreadListViewModel.h"
 
 @implementation XEJRevealViewModel

@@ -34,6 +34,8 @@
 {
     self.mainTableView = ({
         XEJTableView *tableView = [[XEJTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        //注意MVVM下tableView的视图层次，vc-view-view-tableview，自由定制时一些非预期情况需要注意
+        //tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         [tableView registerClass:[XEJThreadListCell class] forCellReuseIdentifier:NSStringFromClass([XEJThreadListCell class])];
         tableView.dataSource = self;
         tableView.delegate = self;
@@ -90,6 +92,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.viewModel.cellSelectedSubject sendNext:indexPath];
 }
 

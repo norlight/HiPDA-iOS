@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *fid;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) BOOL private;  //是否为隐私版块（需登录才能查看）
 
 @end

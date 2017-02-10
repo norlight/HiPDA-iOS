@@ -8,7 +8,6 @@
 
 #import "XEJThreadListViewModel.h"
 #import "XEJThreadViewModel.h"
-#import "XEJThread.h"
 #import "XEJNetworkManager.h"
 #import <Ono/Ono.h>
 #import <RegexKitLite-NoWarning/RegexKitLite.h>
@@ -17,14 +16,20 @@
 
 @interface XEJThreadListViewModel ()
 
-@property (nonatomic, strong) XEJThread *model;
+
 @property (nonatomic, assign) NSInteger currentPage;
 
 @end
 
 @implementation XEJThreadListViewModel
 
-- (instancetype)initWithModel:(XEJThread *)model
+- (instancetype)init
+{
+    _model = [XEJForum new];
+    return [super init];
+}
+
+- (instancetype)initWithModel:(XEJForum *)model
 {
     _model = model;
     return [super initWithModel:model];
@@ -36,6 +41,10 @@
     _updateUI = [RACSubject subject];
     _refreshEndSubject = [RACSubject subject];
     _cellSelectedSubject = [RACSubject subject];
+    
+    _fid = _model.fid;
+    _title = _model.title;
+    _private = _model.private;
     
     [_cellSelectedSubject subscribeNext:^(NSIndexPath *indexPath) {
         @strongify(self);
@@ -87,9 +96,10 @@
 - (RACSignal *)viewModelsSignal
 {
 
-    NSString *fid = @"59";
+    //NSString *fid = @"59";
     NSNumber *page = @(1);
-    NSString *path = [NSString stringWithFormat:XEJForumPath, fid, page];
+    NSString *path = [NSString stringWithFormat:XEJForumPath, _fid, page];
+    //NSLog(@"%@", _fid);
     return [[[[[[XEJNetworkManager sharedManager] GET:path parameters:nil]
                
                flattenMap:^RACStream *(RACTuple *tuple) {
@@ -97,6 +107,7 @@
                    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                        NSError *error = nil;
                        ONOXMLDocument *document = [ONOXMLDocument HTMLDocumentWithData:response error:&error];
+                       //NSLog(@"%@", document.description);
                        error ? [subscriber sendError:error] : [subscriber sendNext:document];
                        return nil;
                    }];

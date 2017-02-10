@@ -9,6 +9,7 @@
 #import "XEJRevealViewController.h"
 #import "XEJRearViewController.h"
 #import "XEJThreadListViewController.h"
+#import "XEJNavigationController.h"
 
 @implementation XEJRevealViewController
 
@@ -21,9 +22,9 @@
 {
     _viewModel = viewModel;
     XEJRearViewController *rearVc = [[XEJRearViewController alloc] initWithViewModel:viewModel.rearViewModel];
-    XEJThreadListViewController *frontVc = [[XEJThreadListViewController alloc] initWithViewModel:viewModel.frontViewModel];
+    XEJThreadListViewController *frontVc = [[XEJThreadListViewController alloc] initWithViewModel:(XEJThreadListViewModel *)viewModel.frontViewModel];
     
-    return [super initWithRearViewController:[[UINavigationController alloc] initWithRootViewController:rearVc] frontViewController:[[UINavigationController alloc] initWithRootViewController:frontVc]];
+    return [super initWithRearViewController:rearVc frontViewController:[[XEJNavigationController alloc] initWithRootViewController:frontVc]];
 }
 
 

@@ -10,4 +10,16 @@
 
 @implementation XEJForum
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _fid = @"59";
+        _title = @"Geek Talks";
+        _private = NO;
+    }
+    
+    return self;
+}
+
 @end
