@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _fid = @"59";
+        _fid = @"7";
         _title = @"Geek Talks";
         _private = NO;
     }
