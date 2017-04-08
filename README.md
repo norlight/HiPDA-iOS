@@ -3,7 +3,7 @@
 
 *基于MVVM+RAC的一次实践。*
 
-##简介
+## 简介
 
 采用MVVM，Model层为瘦Model，只包含属性和少许可以自管理的解析转换逻辑。
 
@@ -17,13 +17,13 @@
 参考：[MVVM With ReactiveCocoa](http://blog.leichunfeng.com/blog/2016/02/27/mvvm-with-reactivecocoa/)
 
 
-##基本思路
+## 基本思路
 
 爬回HTML，生成DOM，结合CSS Selector、XPath、正则等进行解析、清理、修改。
 
 帖子详情楼层内容先进行清理，再使用DTCoreText进行原生显示。诸如投票贴、屏蔽贴、引用等特殊内容，会插入object标签，计算好尺寸，显示时用原生视图替代。
 
-##目录结构
+## 目录结构
 
     .
     └── HiPDA
@@ -41,7 +41,7 @@
         └── Vendor：没使用CocoaPods管理的第三方库
 
 
-##第三方类库
+## 第三方类库
 
     .
     └── Pods
