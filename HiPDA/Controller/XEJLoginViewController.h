@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) XEJLoginViewModel *viewModel;
 
-- (instancetype)initWithViewModel:(XEJLoginViewModel *)viewModel;
+//- (instancetype)initWithViewModel:(XEJLoginViewModel *)viewModel;
 
 @end

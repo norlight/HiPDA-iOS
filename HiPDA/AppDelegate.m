@@ -15,6 +15,7 @@
 #import "XEJRevealViewController.h"
 #import "XEJAccountManager.h"
 #import "XEJUtility.h"
+#import <AspectsV1.4.2/Aspects.h>
 
 @interface AppDelegate ()
 
@@ -29,30 +30,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [[UINavigationBar appearance] setTintColor:XEJMainColor];
+    NSURLCache *urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 * 1024 * 1024
+                                                         diskCapacity:40 * 1024 * 1024
+                                                             diskPath:nil];
+    [NSURLCache setSharedURLCache:urlCache];
     
-    //不要轻易直接订阅，两个信号会绑成一个，任何error和complete都会导致原先两个都终止
-    //[[[XEJAccountManager sharedManager] autoLogin] subscribe:[XEJAccountManager sharedManager].isLogin];
     [[[XEJAccountManager sharedManager] autoLogin] subscribeNext:^(id x) {
         [[XEJAccountManager sharedManager].isLogin sendNext:x];
     } error:^(NSError *error) {
         //
     }];
 
-    //XEJThreadListViewModel *viewModel = [XEJThreadListViewModel new];
     XEJRevealViewModel *viewModel = [XEJRevealViewModel new];
     [[XEJNavigationControllerStackManager sharedManager] resetRootViewModel:viewModel];
-    
-    
-    //XEJLoginViewController *vc = [XEJLoginViewController new];
-    //XEJThreadListViewController *vc = [XEJThreadListViewController new];
-    XEJRevealViewController *vc = [XEJRevealViewController new];
-    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    //self.window.rootViewController = nav;
-
-    
-    
     
     
 

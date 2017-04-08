@@ -60,17 +60,16 @@
     [self setupNavigation];
 }
 
-
 - (void)setupViews
 {
     @weakify(self);
     self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
-    
+
     self.manager =({
         RETableViewManager *manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
         manager.style.cellHeight = 44;
-        
+
         UIImage *backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]
                                                       size:CGSizeMake(40, 40)];
         UIImage *first = [ backgroundImage imageByRoundCornerRadius:4.0f
@@ -78,11 +77,11 @@
                                                         borderWidth:0.8f
                                                         borderColor:[UIColor colorWithWhite:0.85f alpha:1.0f]
                                                      borderLineJoin:kCGLineJoinRound];
-        
+
         UIImage *middle = [backgroundImage imageByRoundCornerRadius:0.0f
                                                         borderWidth:0.8f
                                                         borderColor:[UIColor colorWithWhite:0.85f alpha:1.0f]];
-        
+
         UIImage *last = [backgroundImage imageByRoundCornerRadius:4.0f
                                                           corners:UIRectCornerBottomLeft | UIRectCornerBottomRight
                                                       borderWidth:0.8f
@@ -203,7 +202,6 @@
     });
 }
 
-
 - (void)bindViewModel:(XEJLoginViewModel *)viewModel
 {
     @weakify(self);
@@ -257,6 +255,7 @@
 
 - (void)setupNavigation
 {
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.dismissCommand;
 }

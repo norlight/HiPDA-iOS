@@ -167,58 +167,7 @@
         make.right.offset(-8);
     }];
     
-    /*
-    [self.updatedAtLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        (void)make.centerX;
-        make.top.equalTo(self.avatarView.mas_bottom).offset(20);
-    }];
-    
-    
-    [self.quoteView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.updatedAtLabel.mas_bottom).offset(20);
-        make.left.offset(8);
-        make.right.offset(-8);
-    }];
-    
-    
-    [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        //make.top.equalTo(self.updatedAtLabel.mas_bottom);
-        make.top.equalTo(self.quoteView.mas_bottom);
-        make.left.equalTo(self.quoteView);
-        make.bottom.offset(-5);
-    }];
-     */
-    
-    /*
-    [self.threadContentViews enumerateObjectsUsingBlock:^(UIView*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (idx == 0) {
-            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-                //(void)make.centerX;
-                make.top.equalTo(self.avatarView.mas_bottom).offset(20);
-                make.left.offset(5);
-                make.right.offset(-5);
-            }];
-        } else if (idx == self.threadContentViews.count - 1) {
-            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-                UIView *previousView = self.threadContentViews[idx - 1];
-                //(void)make.centerX;
-                make.top.equalTo(previousView.mas_bottom).offset(20);
-                make.left.offset(5);
-                make.right.offset(-5);
-                make.bottom.offset(-20);
-            }];
-        } else {
-            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-                UIView *previousView = self.threadContentViews[idx - 1];
-                //(void)make.centerX;
-                make.top.equalTo(previousView.mas_bottom).offset(20);
-                make.left.offset(5);
-                make.right.offset(-5);
-                
-            }];
-        }
-    }];
-     */
+
     
     
     [self.bodyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -235,18 +184,6 @@
 
 - (void)bindViewModel:(XEJThreadCellViewModel *)viewModel
 {
-    /*
-    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        //if obj is kind of text||image...
-        [obj removeFromSuperview];
-    }];
-    [self.threadContentViews enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj mas_remakeConstraints:^(MASConstraintMaker *make) {
-            //
-        }];
-    }];
-    */
-    
     self.viewModel = viewModel;
     
     [self.avatarView bindViewModel:viewModel.avatarViewModel];
@@ -263,17 +200,24 @@
 #pragma mark - DTAttributedTextContentViewDelegate
 - (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttachment:(DTTextAttachment *)attachment frame:(CGRect)frame
 {
+    /*
+    if([attachment isKindOfClass:[DTImageTextAttachment class]]){
+        CGFloat aspectRatio = frame.size.height / frame.size.width;
+        CGFloat width = SCREENWIDTH - 8 * 2;
+        CGFloat height = width * aspectRatio;
+        UIView *View = [[UIView alloc] initWithFrame:frame];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,width,height)];
+        imageView.backgroundColor = [UIColor grayColor];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [View addSubview:imageView];
+        
+        return View;
+    }
+     */
+    
     if ([attachment isKindOfClass:[DTObjectTextAttachment class]]) {
         NSString *postType = attachment.attributes[@"posttype"];  //注意属性名全会变成小写
-        
-        /*
-        DTObjectTextAttachment *attach = (DTObjectTextAttachment *)attachment;
-        [attach.childNodes enumerateObjectsUsingBlock:^(DTHTMLElement *element, NSUInteger idx, BOOL * _Nonnull stop) {
-            //
-            NSLog(@"%@", element.debugDescription);
-            
-        }];
-         */
+ 
         if ([postType isEqualToString:@"locked"]) {
             XEJLockedObjectView *view = [XEJLockedObjectView new];
             view.frame = frame;

@@ -1,9 +1,10 @@
 # HiPDA iOS
 
+
 *基于MVVM+RAC的一次实践。*
 
-
 ##简介
+
 采用MVVM，Model层为瘦Model，只包含属性和少许可以自管理的解析转换逻辑。
 
 大多情况下，每个Controller会有一个对应的mainView（可在loadView处直接赋值的view），以ViewModel初始化Controller，Controller内再用该ViewModel初始化mainView，两者共用一个ViewModel。
@@ -17,9 +18,11 @@
 
 
 ##基本思路
+
 爬回HTML，生成DOM，结合CSS Selector、XPath、正则等进行解析、清理、修改。
 
 帖子详情楼层内容先进行清理，再使用DTCoreText进行原生显示。诸如投票贴、屏蔽贴、引用等特殊内容，会插入object标签，计算好尺寸，显示时用原生视图替代。
+
 ##目录结构
 
     .
@@ -39,6 +42,7 @@
 
 
 ##第三方类库
+
     .
     └── Pods
         ├── AFNetworking：网络库，必备，不多说

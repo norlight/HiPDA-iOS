@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa879d69-da6d-4b74-8f2d-64061196a55e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HiPDA/Util/Base/UIViewController+MRCUMAnalytics.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HiPDA/Util/Base/UIViewController+MRCUMAnalytics.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/HiPDA.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA.xcodeproj/xcuserdata/Blink.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/HiPDA.xcodeproj/xcuserdata/Blink.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA/AppDelegate.m" afterPath="$PROJECT_DIR$/HiPDA/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h" afterPath="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m" afterPath="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA/View/XEJThreadCell.m" afterPath="$PROJECT_DIR$/HiPDA/View/XEJThreadCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m" afterPath="$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="HiPDA-iOS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6_9.3_x86_64_1" />
+  <component name="FavoritesManager">
+    <favorites_list name="HiPDA" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJLoginViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+              <folding>
+                <element signature="e#134#168#0" expanded="true" />
+                <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+                <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+                <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+                <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+                <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+                <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+                <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+                <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+                <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+                <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+                <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+                <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+                <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJViewProtocol.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewProtocol.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJLoginViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#134#157#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJViewControllerProtocol.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewControllerProtocol.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJLoginViewModel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/ViewModel/XEJLoginViewModel.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJViewModel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewModel.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJThreadListView.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1380">
+              <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+              <folding>
+                <element signature="e#130#159#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XEJThreadListView.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>basicControlsSection</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HiPDA/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h" />
+        <option value="$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m" />
+        <option value="$PROJECT_DIR$/HiPDA/Util/Base/XEJViewModel.h" />
+        <option value="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h" />
+        <option value="$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="730" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>Clang Issues</id>
+          </State>
+          <State>
+            <id>Data flow analysisC/C++</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Swift</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pods" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiPDA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.4.0/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.4.0/bin/node" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.HiPDA">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HiPDA" TARGET_NAME="HiPDA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HiPDA" RUN_TARGET_NAME="HiPDA" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HiPDA" TARGET_NAME="HiPDA" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HiPDA" TARGET_NAME="HiPDATests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="HiPDA" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HiPDA" TARGET_NAME="HiPDA" CONFIG_NAME="Debug" SCHEME_NAME="HiPDA" RUN_TARGET_PROJECT_NAME="HiPDA" RUN_TARGET_NAME="HiPDA" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.HiPDA" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa879d69-da6d-4b74-8f2d-64061196a55e" name="Default" comment="" />
+      <created>1489927805601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1489927805601</updated>
+      <workItem from="1489927817042" duration="523000" />
+      <workItem from="1489928819122" duration="749000" />
+      <workItem from="1489972628955" duration="103000" />
+      <workItem from="1489972814569" duration="148000" />
+      <workItem from="1490536721352" duration="283000" />
+      <workItem from="1490537186399" duration="170000" />
+      <workItem from="1490538542967" duration="802000" />
+      <workItem from="1490539625678" duration="127000" />
+      <workItem from="1490539784872" duration="265000" />
+      <workItem from="1490540084601" duration="432000" />
+      <workItem from="1490540553189" duration="1879000" />
+      <workItem from="1490544545367" duration="242000" />
+      <workItem from="1490544819761" duration="10698000" />
+      <workItem from="1490604424043" duration="12051000" />
+      <workItem from="1491113480800" duration="21000" />
+      <workItem from="1491113548239" duration="280000" />
+      <workItem from="1491113860345" duration="280000" />
+      <workItem from="1491119052964" duration="254000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29307000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="730" extended-state="6" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366958" sideWeight="0.4827586" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2366958" sideWeight="0.51724136" order="1" side_tool="true" content_ui="tabs" x="483" y="69" width="314" height="638" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34165367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28196982" sideWeight="0.5054602" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49722" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32917318" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34165367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27799842" sideWeight="0.49069768" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.49722" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27799842" sideWeight="0.5093023" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding>
+            <element signature="e#130#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewControllerProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/ViewModel/XEJLoginViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding>
+            <element signature="e#130#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2235">
+          <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJThreadListViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#130#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="114" column="8" lean-forward="false" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJThreadListViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJThreadListViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/View/XEJThreadListView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding>
+            <element signature="e#130#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/ViewModel/XEJLoginViewModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Util/Base/XEJViewControllerProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HiPDA/Controller/XEJLoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="e#134#168#0" expanded="true" />
+            <marker date="1491142136000" expanded="true" signature="995:10756" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1288:1307" ph="..." />
+            <marker date="1491142136000" expanded="true" signature="1471:1539" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="1560:8316" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="6052:7489" ph="^(RERadioItem *item){...}" />
+            <marker date="1491142136000" expanded="true" signature="6179:6548" ph="@[...]" />
+            <marker date="1491142136000" expanded="true" signature="6744:6974" ph="^(RETableViewItem *selectedItem){...}" />
+            <marker date="1491142136000" expanded="true" signature="8371:10486" ph="{...}" />
+            <marker date="1491142136000" expanded="true" signature="8620:9126" ph="^NSString *(NSString *question){...}" />
+            <marker date="1491142136000" expanded="true" signature="8685:9085" ph="@{...}" />
+            <marker date="1491142136000" expanded="true" signature="9352:9782" ph="^(NSNumber *executing){...}" />
+            <marker date="1491142136000" expanded="true" signature="9861:10184" ph="^(NSNumber *success){...}" />
+            <marker date="1491142136000" expanded="true" signature="10513:10751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

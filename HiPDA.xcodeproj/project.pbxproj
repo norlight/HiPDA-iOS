@@ -30,7 +30,6 @@
 		669DFC081E41BA210000D3FD /* XEJFloorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 669DFC071E41BA210000D3FD /* XEJFloorView.m */; };
 		669DFC0B1E41BA3F0000D3FD /* XEJFloorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 669DFC0A1E41BA3F0000D3FD /* XEJFloorViewModel.m */; };
 		669DFC141E42E20E0000D3FD /* XEJObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 669DFC131E42E20E0000D3FD /* XEJObjectViewModel.m */; };
-		66A6AD4A1E3236FE0019D536 /* XEJThreadListViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD491E3236FE0019D536 /* XEJThreadListViewModelSpec.m */; };
 		66A6AD4D1E345CC10019D536 /* XEJAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD4C1E345CC10019D536 /* XEJAvatarView.m */; };
 		66A6AD501E345CF00019D536 /* XEJAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD4F1E345CF00019D536 /* XEJAvatarViewModel.m */; };
 		66A6AD531E34A3D40019D536 /* XEJThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6AD521E34A3D40019D536 /* XEJThreadViewController.m */; };
@@ -60,6 +59,7 @@
 		66AF7EF41E3E384000F46B61 /* XEJPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF31E3E384000F46B61 /* XEJPost.m */; };
 		66AF7EF71E40D87C00F46B61 /* XEJLockedObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF61E40D87C00F46B61 /* XEJLockedObjectView.m */; };
 		66AF7EFA1E40D8A100F46B61 /* XEJLockedObjectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF7EF91E40D8A100F46B61 /* XEJLockedObjectViewModel.m */; };
+		66E4DB7F1E92282A0030660A /* XEJThreadListViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E4DB7E1E92282A0030660A /* XEJThreadListViewModelSpec.m */; };
 		66FB656A1E4B21B70010167F /* XEJRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB65691E4B21B70010167F /* XEJRevealViewController.m */; };
 		66FB656D1E4B22140010167F /* XEJRevealViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB656C1E4B22140010167F /* XEJRevealViewModel.m */; };
 		66FB65701E4B236F0010167F /* XEJRearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB656F1E4B236F0010167F /* XEJRearViewController.m */; };
@@ -150,7 +150,6 @@
 		669DFC0A1E41BA3F0000D3FD /* XEJFloorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJFloorViewModel.m; sourceTree = "<group>"; };
 		669DFC121E42E20E0000D3FD /* XEJObjectViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJObjectViewModel.h; sourceTree = "<group>"; };
 		669DFC131E42E20E0000D3FD /* XEJObjectViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJObjectViewModel.m; sourceTree = "<group>"; };
-		66A6AD491E3236FE0019D536 /* XEJThreadListViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadListViewModelSpec.m; sourceTree = "<group>"; };
 		66A6AD4B1E345CC10019D536 /* XEJAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJAvatarView.h; sourceTree = "<group>"; };
 		66A6AD4C1E345CC10019D536 /* XEJAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJAvatarView.m; sourceTree = "<group>"; };
 		66A6AD4E1E345CF00019D536 /* XEJAvatarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJAvatarViewModel.h; sourceTree = "<group>"; };
@@ -211,6 +210,7 @@
 		66AF7EF61E40D87C00F46B61 /* XEJLockedObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLockedObjectView.m; sourceTree = "<group>"; };
 		66AF7EF81E40D8A100F46B61 /* XEJLockedObjectViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJLockedObjectViewModel.h; sourceTree = "<group>"; };
 		66AF7EF91E40D8A100F46B61 /* XEJLockedObjectViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJLockedObjectViewModel.m; sourceTree = "<group>"; };
+		66E4DB7E1E92282A0030660A /* XEJThreadListViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJThreadListViewModelSpec.m; sourceTree = "<group>"; };
 		66FB65681E4B21B70010167F /* XEJRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRevealViewController.h; sourceTree = "<group>"; };
 		66FB65691E4B21B70010167F /* XEJRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEJRevealViewController.m; sourceTree = "<group>"; };
 		66FB656B1E4B22140010167F /* XEJRevealViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEJRevealViewModel.h; sourceTree = "<group>"; };
@@ -325,9 +325,9 @@
 		664056D71DF952C1002FC462 /* HiPDATests */ = {
 			isa = PBXGroup;
 			children = (
+				66E4DB7E1E92282A0030660A /* XEJThreadListViewModelSpec.m */,
 				664056D81DF952C1002FC462 /* HiPDATests.m */,
 				664056DA1DF952C1002FC462 /* Info.plist */,
-				66A6AD491E3236FE0019D536 /* XEJThreadListViewModelSpec.m */,
 			);
 			path = HiPDATests;
 			sourceTree = "<group>";
@@ -919,7 +919,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664056D91DF952C1002FC462 /* HiPDATests.m in Sources */,
-				66A6AD4A1E3236FE0019D536 /* XEJThreadListViewModelSpec.m in Sources */,
+				66E4DB7F1E92282A0030660A /* XEJThreadListViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
