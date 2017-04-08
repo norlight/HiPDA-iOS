@@ -23,6 +23,11 @@
 
 帖子详情楼层内容先进行清理，再使用DTCoreText进行原生显示。诸如投票贴、屏蔽贴、引用等特殊内容，会插入object标签，计算好尺寸，显示时用原生视图替代。
 
+**注意：使用DTCoreText渲染含有图片的内容时在模拟器下有可能会 crash，需到`安全性与隐私-隐私-辅助功能`将所有使用辅助功能的程序先勾掉。**
+该 Bug 见：[Radar: Accessibility-based Tools crash app running in iOS 7 Simulator
+](https://www.cocoanetics.com/2013/11/radar-accessibility-based-tools-crash-app-running-in-ios-7-simulator/)
+
+
 ## 目录结构
 
     .
