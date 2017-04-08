@@ -13,7 +13,7 @@
 
 上述流程各方法使用protocol进行约定。
 
-除了侧滑抽屉部分，应用内所有的跳转都基于ViewModel。思路来自雷纯锋大神，做了少许改进，hook了ViewModel层，避开对服务总线的依赖，可在任意ViewModel内类似[self pushViewModel:anotherVM]这样直接进行跳转。
+除了侧滑抽屉部分，应用内所有的跳转都基于ViewModel。思路来自雷纯锋大神，做了少许改进，hook了ViewModel层，避开对服务总线的依赖，可在任意ViewModel内类似`[self pushViewModel:anotherVM]`这样直接进行跳转。
 参考：[MVVM With ReactiveCocoa](http://blog.leichunfeng.com/blog/2016/02/27/mvvm-with-reactivecocoa/)
 
 
